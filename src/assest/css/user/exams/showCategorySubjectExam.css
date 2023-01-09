@@ -1,0 +1,114 @@
+.exams-category{
+    margin-top: 130px;
+  }
+  
+  .exams-category .groups-wrapper{
+    display: flex;
+    column-gap: 7rem;
+    row-gap: 1.75rem;
+    flex-direction: column;
+  }
+  
+  @media (min-width: 768px) {
+    .exams-category .groups-wrapper{
+        flex-direction: row;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .exams-category .category-wrap{
+        width: 35%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .exams-category .category-wrap{
+        width: 25%;
+    }
+  }
+  
+  .exams-category .groups-content{
+    width: 100%;
+  }
+  
+  @media (min-width: 768px) {
+    .exams-category .groups-content{
+        width: 60%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .exams-category .groups-content{
+        width: 70%;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .exams-category .groups-content{
+        width: 78%;
+    }
+  }
+  
+  .exams-category .title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .exams-category .title{
+        margin-bottom: 3rem/* 48px */;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .exams-category .title{
+        font-size: 32px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .exams-category .title{
+        font-size: 28px;
+    }
+  }
+  
+  .exams-category .box{
+    margin-bottom: 5rem
+  }
+  
+  .exams-category .box-title{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 1.75rem;
+  }
+  
+  @media (min-width: 1024px) {
+    .exams-category .box-title{
+        font-size: 30px;
+    }
+  }
+  .exams-category  .link-quesions{
+    width:260px;
+    display: block;
+  }
+  .exams-category .exams-wrapper .exam-subject-name{
+    width: 260px;
+    height: 54px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: -0.015em;
+    color: #000000;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 15px 0;
+  }
+  

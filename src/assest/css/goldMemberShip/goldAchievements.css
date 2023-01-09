@@ -1,0 +1,102 @@
+.dashboard .dashboard-wrapper{
+    display: flex;
+    background-color: #F8F9FD;
+    align-items: flex-start;
+    position: relative;
+}
+
+.dashboard-wrapper .dashbaord-content{
+    padding: 20px 15px;
+    width: 100%;
+}
+
+.gold-achievements{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.gold-achievements .gold-achievements-header{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    column-gap: 20px;
+    align-items: center;
+    flex-direction: column;
+}
+@media (min-width:768px)
+{
+    .gold-achievements .gold-achievements-mainchart{
+        flex-direction: row;
+    }
+}
+
+.gold-achievements .gold-achievements-header .gold-achievements-average-degree,
+.gold-achievements .gold-achievements-header .gold-achievements-rate{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.gold-achievements .gold-achievements-header .gold-achievements-average-degree span,
+.gold-achievements .gold-achievements-header .gold-achievements-rate{
+    color: #64B161;
+}
+
+.gold-achievements .gold-achievements-header .gold-achievements-rate{
+    margin-bottom: 16px;
+}
+
+.gold-achievements .gold-achievements-images{
+    display: flex;
+    column-gap: 12px;
+}
+.gold-achievements .gold-achievements-images img{
+    width: 92px;
+    height: 92px;
+}
+
+.gold-achievements .gold-achievements-mainchart{
+    width: 95%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+@media (min-width:1024px)
+{
+    .gold-achievements .gold-achievements-mainchart{
+        width: 70%;
+    }
+}
+
+.gold-achievements .gold-achievements-charts{
+    display: grid;
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    column-gap: 22px;
+    row-gap: 22px;
+}
+@media (min-width:640px)
+{
+    .gold-achievements .gold-achievements-charts{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+@media (min-width:1024px)
+{
+    .gold-achievements .gold-achievements-charts{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+}
+.gold-achievements .gold-achievements-chart{
+    width: 100%;
+}
+
+.gold-achievements .gold-achievements-chart-wrapper{
+    background-color: #FFFFFF;
+    padding: 10px;
+}
+
+.gold-achievements .gold-achievements-chart .gold-achievements-chart-title{
+    font-size: 18px;
+    margin-top: 8px;
+    font-weight: 600;
+    text-align: center;
+}

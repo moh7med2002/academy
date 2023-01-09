@@ -1,0 +1,48 @@
+.singleCourse .study .unit{
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    width: 767px;
+    max-width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    align-items: center;
+    color: #18A0FB;
+    padding: 10px 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.singleCourse .study .unit .btn{
+    color: #18A0FB;
+    font-size: 30px;
+}
+
+.singleCourse .boxes-unit{
+    padding: 0 30px;
+}
+
+.singleCourse .box-unit{
+    width: 500px;
+    max-width: 100%;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.singleCourse .box-unit.color{
+    background-color: #D7E7F2;
+}
+
+.singleCourse .unit-content{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.singleCourse .unit-text{
+    font-size: 16px;
+    font-weight: 400;
+}

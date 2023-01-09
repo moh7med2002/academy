@@ -1,0 +1,34 @@
+.friend{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-bottom: 12px;
+    padding: 0 5px;
+}
+
+.friend .friend-info{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.friend .friend-info .friend-image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.friend .friend-info .friend-name{
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    color: #000000;
+    font-size: 18px;
+}
+
+.friend .time{
+    font-size: 18px;
+    font-weight: 400;
+    color: #365E7D;
+}

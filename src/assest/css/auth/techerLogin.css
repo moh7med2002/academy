@@ -1,0 +1,143 @@
+.teacher-login, .student-login{
+    padding-top: 50px;
+    min-height: 100vh;
+    background-color:#F8F9FD;
+}
+.teacher-login .register-top .heading , .teacher-login .register-top .hasaccount, .student-login .register-top .heading , .student-login .register-top .hasaccount{
+    font-weight: bold;
+    font-size: 22px;
+    color: #000000;
+    text-align: center;
+    letter-spacing: -0.015em;
+}
+.teacher-login .register-top .hasaccount .link, .student-login .register-top .hasaccount .link{
+    color: #18A0FB;
+}
+ .teacher-login .register-as, .student-login .register-as{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 16px;
+}
+.teacher-login .register-as .notActive, .register-as .active, .student-login .register-as .notActive, .register-as .active{
+    width: 160px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+.teacher-login .register-as .notActive, .student-login .register-as .notActive{
+    background-color: #FFFFFF;
+}
+.teacher-login .register-as .active, .student-login .register-as .active{
+    color:#FFFFFF;
+    background-color: #18A0FB;
+}
+.teacher-login .register-process-wrapper, .student-login .register-process-wrapper{
+    max-width: 940px;
+    margin: 40px auto 0;
+}
+.teacher-login .register-through, .student-login .register-through{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.teacher-login .register-through .register-way-box, .student-login .register-through .register-way-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 170px;
+    height: 52px;
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+.teacher-login .register-through .image-way, .student-login .register-through .image-way{
+    width: 28px;
+    height: 28px;
+}
+.teacher-login .register-through .name-way, .student-login .register-through .name-way{
+    color: #989090;
+    font-size: 16px;
+    font-weight: 500;
+}
+.teacher-login .register-through .or, .student-login .register-through .or{
+    font-weight: bold;
+    color: #000000;
+    font-size: 24px;
+}
+
+.teacher-login .register-form, .student-login .register-form{
+    margin-top: 35px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+@media (min-width: 620px){
+    .teacher-login .register-form, .student-login .register-form{
+        align-items: center;
+    }
+}
+.teacher-login .register-form .form-input-wrapper, .student-login .register-form .form-input-wrapper{
+    margin-bottom: 16px;
+}
+.teacher-login .register-form .form-input-wrapper .input-title, .student-login .register-form .form-input-wrapper .input-title{
+    display: block;
+    font-weight: 700;
+    font-size: 17px;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.teacher-login .register-form .form-input-wrapper .input, .student-login .register-form .form-input-wrapper .input{
+    display: block;
+    width: 480px;
+    height: 40px;
+    max-width: 100%;
+    background: #FFFFFF;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    padding: 4px 12px;
+    letter-spacing: -0.015em;
+    color: #333;
+    font-size: 17px;
+}
+.teacher-login .register-form .form-input-wrapper .input:focus, .student-login .register-form .form-input-wrapper .input:focus{
+    border: 1px solid #18A0FB;
+}
+
+.teacher-login .register-btn, .student-login .register-btn{
+    background-color: #18A0FB;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 480px;
+    height: 45px;
+    max-width: 100%;
+    border-radius: 18px;
+    font-size: 22px;
+    font: bold;
+    margin: 40px auto 10px;
+}
+
+.teacher-login .forgot-password-link, .student-login .forgot-password-link{
+    color: #18A0FB;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.teacher-login input, .student-login input{
+    box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.2);
+}

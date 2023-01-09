@@ -1,0 +1,112 @@
+.lessons-search-found{
+    margin-top: 130px;
+  }
+  
+  .lessons-search-found .video-lessons-wrapper{
+    display: flex;
+    column-gap: 7rem;
+    row-gap: 1.75rem;
+    flex-direction: column;
+  }
+  
+  @media (min-width: 768px) {
+    .lessons-search-found .video-lessons-wrapper{
+        flex-direction: row;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .lessons-search-found .lessons-wrap{
+        width: 35%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .lessons-search-found .lessons-wrap{
+        width: 25%;
+    }
+  }
+  
+  .lessons-search-found .video-lessons-content{
+    width: 100%;
+  }
+  
+  @media (min-width: 768px) {
+    .lessons-search-found .video-lessons-content{
+        width: 60%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .lessons-search-found .video-lessons-content{
+        width: 70%;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .lessons-search-found .video-lessons-content{
+        width: 78%;
+    }
+  }
+  
+  .lessons-search-found .title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .lessons-search-found .title{
+        margin-bottom: 3rem/* 48px */;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .lessons-search-found .title{
+        font-size: 32px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .lessons-search-found .title{
+        font-size: 28px;
+    }
+  }
+  
+
+  .lessons-search-found .search-title{
+    padding: 0 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 18px;
+  }
+   
+  .lessons-search-found .boxes-wrapper{
+    display: grid;
+    gap: 2.5rem;
+    margin-bottom: 80px;
+  }
+  
+  @media (min-width: 640px) {
+    .lessons-search-found .boxes-wrapper{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .lessons-search-found .boxes-wrapper{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .lessons-search-found .boxes-wrapper{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .lessons-search-found .boxes-wrapper{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }

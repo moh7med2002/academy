@@ -1,0 +1,48 @@
+.Attendance{
+    padding: 40px 0;
+}
+.Attendance .Attendance-title{
+    font-size: 22px;
+    font-weight: 700;
+    padding: 0px 40px;
+    margin-bottom: 20px;
+}
+
+.Attendance-table-wrapper{
+    overflow-x: auto;
+}
+
+.Attendance-table{
+    display: block;
+    width: 210px;
+    border-spacing: 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+@media (min-width:1280px)
+{
+    .Attendance-table{
+        width: 100%;
+    }
+}
+
+.Attendance-table .table-name{
+    width: 250px;
+}
+
+.Attendance-table td,
+.Attendance-table th{
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+}
+
+.Attendance-table .Present{
+    color: #64B161;
+}
+
+.Attendance-table .absent{
+    color: #F40A0A;
+}

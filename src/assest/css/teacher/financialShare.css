@@ -1,0 +1,19 @@
+.dashboard .dashboard-wrapper{
+    display: flex;
+    background-color: #F8F9FD ;
+    align-items: flex-start;
+    position: relative;
+}
+ 
+.dashboard .dashboard-wrapper .dashbaord-content{
+    padding: 20px 15px;
+    width: 100%;
+}
+.dashboard .dashboard-wrapper .dashbaord-content .financia-title{
+    padding:0 20px;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #000000;
+}

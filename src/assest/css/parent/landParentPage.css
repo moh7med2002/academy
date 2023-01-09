@@ -1,0 +1,133 @@
+.land-parent{
+    background-color: #F8F9FD ;
+}
+
+.land-parent .land-parent-header{
+    display: flex;
+    width: 100%;
+    column-gap: 20px;
+    padding-top: 40px;
+    flex-direction: column;
+}
+@media (min-width:768px)
+{
+    .land-parent .land-parent-header{
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.land-parent .land-parent-print{
+    margin-top: 30px;
+    width: 230px;
+    height: 74px;
+}
+
+@media (min-width:768px)
+{
+    .land-parent .land-parent-mainchart{
+        flex-direction: column;
+    }
+}
+
+.land-parent .land-parent-header .land-parent-average-degree,
+.land-parent .land-parent-header .land-parent-rate{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.land-parent .land-parent-header .land-parent-average-degree span,
+.land-parent .land-parent-header .land-parent-rate{
+    color: #64B161;
+}
+
+.land-parent .land-parent-header .land-parent-rate{
+    margin-bottom: 16px;
+}
+
+.land-parent .land-parent-images{
+    display: flex;
+    column-gap: 12px;
+}
+.land-parent .land-parent-images img{
+    width: 92px;
+    height: 92px;
+}
+
+.land-parent .land-parent-text-wrapper{
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.land-parent .land-parent-text-wrapper .land-parent-text-title{
+    font-size: 18px;
+}
+
+.land-parent .land-parent-text-summary{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.land-parent .land-parent-text-wrapper .land-parent-title-image{
+    width: 64px;
+    height: 60px;
+}
+
+.land-parent .land-parent-mainchart{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width:1024px)
+{
+    .land-parent .land-parent-mainchart{
+        width: 70%;
+    }
+}
+
+.land-parent .land-parent-charts{
+    display: grid;
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    column-gap: 22px;
+    row-gap: 22px;
+}
+@media (min-width:640px)
+{
+    .land-parent .land-parent-charts{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+@media (min-width:1024px)
+{
+    .land-parent .land-parent-charts{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+}
+
+.land-parent .land-parent-chart-link{
+    color: #000000;
+}
+
+.land-parent .gold-achievements-chart{
+    width: 100%;
+}
+
+.land-parent .gold-achievements-chart-wrapper{
+    background-color: #FFFFFF;
+    padding: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.land-parent .gold-achievements-chart .gold-achievements-chart-title{
+    font-size: 18px;
+    margin-top: 8px;
+    font-weight: 600;
+    text-align: center;
+}

@@ -1,0 +1,76 @@
+.course-box{
+    width: 300px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 8px 16px;
+}
+
+@media (min-width:1280px)
+{
+    .course-box{
+        width: 358px;
+    }
+}
+
+.course-box .image{
+    width: 291px;
+    height: 226px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.course-box .course-box-title{
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 18px;
+}
+
+.course-box .course-teacher{
+    color: #000000;
+    font-weight: 400;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.course-box .course-box-info{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 24px;
+}
+
+.course-box .course-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-box .link{
+    width: 137px;
+    height: 35px;
+    display: block;
+    background-color: #18A0FB;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.course-box  .heart{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #F40A0A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.course-box  .icon-share{
+    color: black;
+    font-size: 26px;
+}

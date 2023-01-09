@@ -1,0 +1,23 @@
+.academy-wrapper{
+    padding: 40px 0 80px;
+}
+.academy-wrapper .heading-3{
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+@media (min-width: 1024px) {
+    .academy-wrapper .heading-3 {
+        font-size: 25px;
+    }
+}
+.academy-wrapper .description{
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0 8px;
+}
+@media (min-width: 768px) {
+    .academy-wrapper .description{
+        font-size: 20px;
+    }
+}

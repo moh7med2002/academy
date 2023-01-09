@@ -1,0 +1,96 @@
+.group-messenger{
+    padding: 30px 20px;
+    background-color: #FFFFFF;
+}
+
+.group-messenger .current-group{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #C4C4C4;
+}
+
+
+.group-messenger .users-group-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.group-messenger .current-group .users-group-wrapper .user-group{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: -15px;
+}
+
+.group-messenger .current-group .current-group-name{
+    font-weight: 700;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: -1.5%;
+}
+
+.group-messenger .messages-wrapper{
+    margin: 20px 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.messages-wrapper::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  .messages-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  .messages-wrapper::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+.group-messenger .form-sent-message{
+    border: 0.5px solid rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 10px 5px;
+}
+
+.group-messenger .form-sent-message .message-box{
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 60px;
+    resize: none;
+    font-size: 18px;
+}
+
+.group-messenger .form-sent-message .message-control{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.group-messenger .form-sent-message .message-control .send-btn{
+    width: 100px;
+    height: 35px;
+    background: #18A0FB;
+    border-radius: 5px;
+    letter-spacing: -0.015em;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.group-messenger .form-sent-message .message-control .file-upload .file{
+    display: none;
+}
+
+.group-messenger .form-sent-message .message-control .file-upload .icon-file{
+    color: #242424;
+    font-size: 20px;
+}

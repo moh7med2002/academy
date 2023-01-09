@@ -1,0 +1,50 @@
+.myFavorites-title{
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.015em;
+    color: #000000;
+    padding: 10px;
+    margin-top: 10px;
+}
+@media (min-width:640px)
+{
+    .myFavorites-title{
+        font-size: 28px;
+        padding: 20px;
+    }
+}
+
+.myFavorites-wrapper{
+    display: grid;
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    gap: 30px 20px;
+    margin: 30px 0;
+}
+@media (min-width:768px)
+{
+    .myFavorites-wrapper{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+@media (min-width:1280px)
+{
+    .myFavorites-wrapper{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+}
+
+.fav-title{
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: -0.015em;
+    color: #000000;
+    padding: 10px;
+    margin-top: 10px;
+}
+@media (min-width:640px)
+{
+    .fav-title{
+        font-size: 24px;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,88 @@
+.one-messenger{
+    padding: 30px 20px;
+    background-color: #FFFFFF;
+}
+
+.one-messenger .current-user{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #C4C4C4;
+}
+
+.one-messenger .current-user .current-user-image{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.one-messenger .current-user .current-user-name{
+    font-weight: 700;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: -1.5%;
+}
+
+.one-messenger .messages-wrapper{
+    margin: 20px 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.messages-wrapper::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  .messages-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  .messages-wrapper::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+.one-messenger .form-sent-message{
+    border: 0.5px solid rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 10px 5px;
+}
+
+.one-messenger .form-sent-message .message-box{
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 60px;
+    resize: none;
+    font-size: 18px;
+}
+
+.one-messenger .form-sent-message .message-control{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.one-messenger .form-sent-message .message-control .send-btn{
+    width: 100px;
+    height: 35px;
+    background: #18A0FB;
+    border-radius: 5px;
+    letter-spacing: -0.015em;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.one-messenger .form-sent-message .message-control .file-upload .file{
+    display: none;
+}
+
+.one-messenger .form-sent-message .message-control .file-upload .icon-file{
+    color: #242424;
+    font-size: 20px;
+}

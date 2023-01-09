@@ -1,0 +1,105 @@
+.parent-login{
+    padding-top: 50px;
+    min-height: 100vh;
+    background-color:  #F8F9FD ;
+}
+.parent-login .register-top .heading{
+    font-weight: bold;
+    font-size: 22px;
+    color: #000000;
+    text-align: center;
+    letter-spacing: -0.015em;
+}
+.parent-login .register-top .description-login{
+    font-size: 18px;
+    font-weight: 500;
+    color: #353131;
+    letter-spacing: -0.015em;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.parent-login .register-process-wrapper{
+    max-width: 940px;
+    margin: 40px auto 0;
+}
+.parent-login .register-through{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.parent-login .register-form{
+    margin-top: 35px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+@media (min-width: 620px){
+    .parent-login .register-form{
+        align-items: center;
+    }
+}
+.parent-login .register-form .form-input-wrapper{
+    margin-bottom: 16px;
+}
+.parent-login .register-form .form-input-wrapper .input-title{
+    display: block;
+    font-weight: 700;
+    font-size: 17px;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.parent-login .register-form .form-input-wrapper .input{
+    display: block;
+    width: 480px;
+    height: 40px;
+    max-width: 100%;
+    background: #FFFFFF;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    padding: 4px 12px;
+    letter-spacing: -0.015em;
+    color: #333;
+    font-size: 17px;
+}
+.parent-login .register-form .form-input-wrapper .input:focus{
+    border: 1px solid #18A0FB;
+}
+
+.parent-login .register-btn{
+    background-color: #18A0FB;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 480px;
+    height: 45px;
+    max-width: 100%;
+    border-radius: 18px;
+    font-size: 22px;
+    font: bold;
+    margin: 40px auto 10px;
+}
+.parent-login .register-form .form-input-wrapper .input.select{
+    padding: 4px 16px;
+    color: #000000;
+}
+
+.parent-login .register-form .form-input-wrapper  .input.select .descripe-select{
+    background-color: #989090;
+    color: #FFFFFF;
+}
+.parent-login .register-form .form-input-wrapper  .input.select .descripe-select .option{
+    background-color: #FFFFFF;
+    color: #000000;
+}
+.parent-login .forgot-password-link{
+    color: #18A0FB;
+    font-size: 20px;
+    font-weight: bold;
+}

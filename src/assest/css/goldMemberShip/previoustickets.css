@@ -1,0 +1,125 @@
+.dashboard .dashboard-wrapper{
+    display: flex;
+    background-color: #F8F9FD ;
+    align-items: flex-start;
+    position: relative;
+}
+
+.dashboard-wrapper .dashbaord-content{
+    padding: 20px 15px;
+    width: 100%;
+}
+
+.previous-tickets{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.previous-tickets .previous-tickets-content{
+    width: 90%;
+}
+@media (min-width:640px)
+{
+    .previous-tickets .previous-tickets-content{
+        width: 80%;
+    }
+}
+@media (min-width:768px)
+{
+    .previous-tickets .previous-tickets-content{
+        width: 55%;
+    }
+}
+@media (min-width:1024px)
+{
+    .previous-tickets .previous-tickets-content{
+        width: 40%;
+    }
+}
+
+.previous-tickets .previous-tickets-information{
+    padding-right: 20px;
+}
+
+.previous-tickets .previous-tickets-content .previous-tickets-title{
+    width: 200px;
+    height: 45px;
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    background-color: #99DAE9;
+    border-radius: 6px;
+    text-align: start;
+    padding-right: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.previous-tickets .previous-tickets-ticket-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.previous-tickets .previous-tickets-ticket-header .previous-tickets-state-title,
+.previous-tickets .previous-tickets-ticket-header .previous-tickets-name-title{
+
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.previous-tickets .previous-tickets-box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.previous-tickets .previous-tickets-box .previous-tickets-name-ticket{
+    font-size: 15px;
+    font-weight: 500;
+    width: 100px;
+    height: 30px;
+}
+
+.previous-tickets .previous-tickets-state-wait,
+.previous-tickets .previous-tickets-state-solve{
+    font-size: 15px;
+    font-weight: 500;
+    width: 100px;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.previous-tickets .previous-tickets-state-wait{
+    background-color: #F2691B;
+}
+
+.previous-tickets .previous-tickets-state-solve{
+    background-color: #2CEC28;
+}
+
+.previous-tickets .previous-tickets-image{
+    padding-left: 20px;
+    display: none;
+}
+
+@media (min-width:1024px)
+{
+    .previous-tickets .previous-tickets-image{
+        display: block;
+    }
+}
+
+@media (min-width:1280px)
+{
+    .previous-tickets .previous-tickets-image img{
+        width: 475px;
+        height: 380px;
+    }
+}

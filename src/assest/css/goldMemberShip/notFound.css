@@ -1,0 +1,33 @@
+.notfound-forums-image-wrapper{
+    margin: 40px 0;
+    text-align: center;
+}
+.notfound-forums-image-wrapper .notfound-text{
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 6px;
+}
+.navgation-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 10px;
+    font-weight: bold;
+}
+.myForums-wrapper .navigation-text{
+    color: #000000;
+}
+.navgation-wrapper .navigation-link{
+    color: #18A0FB;
+}
+@media (min-width:640px)
+{
+    .navgation-wrapper{
+        font-size: 28px;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,58 @@
+.myCourses-title{
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.015em;
+    color: #000000;
+    padding: 10px;
+    margin-top: 10px;
+}
+@media (min-width:640px)
+{
+    .myCourses-title{
+        font-size: 28px;
+        padding: 20px;
+    }
+}
+
+.myCourses-wrapper{
+    display: grid;
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    gap: 30px 20px;
+    margin: 30px 0;
+}
+@media (min-width:768px)
+{
+    .myCourses-wrapper{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+@media (min-width:1280px)
+{
+    .myCourses-wrapper{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+}
+.navgation-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 10px;
+    font-weight: bold;
+}
+.myCourses-wrapper .navigation-text{
+    color: #000000;
+}
+.navgation-wrapper .navigation-link{
+    color: #18A0FB;
+}
+@media (min-width:640px)
+{
+    .navgation-wrapper{
+        font-size: 28px;
+        padding: 20px;
+    }
+}

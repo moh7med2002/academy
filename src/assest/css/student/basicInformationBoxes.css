@@ -1,0 +1,141 @@
+.basic-boxes-wrapper{
+    margin-top: 20px;
+    padding:0 20px;
+}
+
+.basic-boxes-wrapper .date-wrapper{
+    display: flex;
+    justify-content: end;
+}
+
+.basic-boxes-wrapper .date-today{
+    width: 250px;
+    max-width: 100%;
+    height: 56px;
+    background: #F7C92B;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+}
+@media (min-width:768px)
+{
+    .basic-boxes-wrapper .date-today{
+        width: 318px;
+        height: 67px;
+        font-size: 22px;
+    }
+}
+
+.basic-boxes-wrapper .boxes-wrapper{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    gap: 20px;
+    align-items: flex-start;
+}
+
+@media (min-width:768px)
+{
+    .basic-boxes-wrapper .boxes-wrapper{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+@media (min-width:1280px)
+{
+    .basic-boxes-wrapper .boxes-wrapper{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+}
+
+.basic-boxes-wrapper .absences, .basic-boxes-wrapper .lates-exams , .basic-boxes-wrapper .daily-study{
+    background-color: #FFFFFF;
+    padding-bottom: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.basic-boxes-wrapper .header-description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 61px;
+    color: #FFFFFF;
+    font-size: 17px;
+    padding: 0 8px;
+}
+@media (min-width:768px)
+{
+    .basic-boxes-wrapper .header-description{
+        font-size: 20px;
+    }
+}
+
+.basic-boxes-wrapper .absences .header-description{
+    background-color: #F40A0A;
+}
+.basic-boxes-wrapper .lates-exams .header-description{
+    background-color: #64B161;
+}
+.basic-boxes-wrapper .daily-study .header-description{
+    background-color: #18A0FB;
+}
+
+.basic-boxes-wrapper .absences .absences-information{
+    height: 61px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 500;
+}
+.basic-boxes-wrapper .lates-exams .lates-exam-info{
+    height: 61px;
+    padding: 0 30px;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.basic-boxes-wrapper .lates-exams .lates-exam-info .exam-info{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+.basic-boxes-wrapper .lates-exams .lates-exam-info .green-shape{
+    width: 16px;
+    height: 16px;
+    background-color: #0E6275;
+    display: block;
+}
+.basic-boxes-wrapper .lates-exams .lates-exam-info .exam-name{
+    font-weight: 500;
+}
+.basic-boxes-wrapper .lates-exams .lates-exam-info .exam-degree{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.basic-boxes-wrapper .daily-study .daily-info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 61px;
+    padding: 0 30px;
+    font-family: 500;
+    font-size: 18px;
+    color: #000000;
+}
+.basic-boxes-wrapper .daily-study .daily-info .subject-name{
+    font-weight: 500;
+}
+.basic-boxes-wrapper .daily-study .daily-info.dark{
+    background-color: rgb(196, 196, 196,0.3);
+}
+.basic-boxes-wrapper .daily-study .daily-info.light{
+    background-color: rgb(196, 196, 196,0.1);
+}

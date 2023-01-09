@@ -1,0 +1,74 @@
+.lessons-search-notFound{
+    margin-top: 130px;
+  }
+  
+  .lessons-search-notFound .groups-wrapper{
+    display: flex;
+    column-gap: 7rem;
+    row-gap: 1.75rem;
+    flex-direction: column;
+  }
+  
+  @media (min-width: 768px) {
+    .lessons-search-notFound .groups-wrapper{
+        flex-direction: row;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .lessons-search-notFound .notFound-wrap{
+        width: 35%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .lessons-search-notFound .notFound-wrap{
+        width: 25%;
+    }
+  }
+  
+  .lessons-search-notFound .groups-content{
+    width: 100%;
+  }
+  
+  @media (min-width: 768px) {
+    .lessons-search-notFound .groups-content{
+        width: 60%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .lessons-search-notFound .groups-content{
+        width: 70%;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .lessons-search-notFound .groups-content{
+        width: 78%;
+    }
+  }
+  
+  .lessons-search-notFound .title-group{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .lessons-search-notFound .title-group{
+        margin-bottom: 3rem/* 48px */;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .lessons-search-notFound .title-group{
+        font-size: 32px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .lessons-search-notFound .title-group{
+        font-size: 28px;
+    }
+  }

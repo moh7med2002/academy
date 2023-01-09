@@ -1,0 +1,81 @@
+.SchoolSchedule{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    overflow-x: auto;
+}
+.dashbaord-content{
+    overflow: hidden;
+}
+.SchoolSchedule table{
+    border-spacing: 0;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.SchoolSchedule table td
+{    
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+}
+
+.SchoolSchedule .table-title{
+    width: 1120px;
+}
+
+.SchoolSchedule .SchoolSchedule-details{
+    display: flex;
+    column-gap: 30px;
+    justify-content: space-between;
+}
+
+.SchoolSchedule .SchoolSchedule-details table .empty-field{
+    width: 400px;
+}
+
+.SchoolSchedule .SchoolSchedule-details .empty-field{
+    max-width: 300px;
+}
+
+.SchoolSchedule .SchoolSchedule-info{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    column-gap: 30px;
+}
+
+.SchoolSchedule .SchoolSchedule-info .empty-field{
+    width: 100px;
+}
+
+.SchoolSchedule .SchoolSchedule-activities{
+    width: 1120px;
+}
+
+.SchoolSchedule .SchoolSchedule-activities td{
+    text-align: center;
+}
+
+.SchoolSchedule .table-Schedule{
+    text-align: center;
+    justify-content: space-between;
+    width: 1120px;
+}
+
+.SchoolSchedule .break{
+    width: 50px;
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    text-align: center;
+}
+
+.SchoolSchedule .regiment{
+    color:#F40A0A;
+}
+
+.SchoolSchedule .table-excersise{
+    display: flex;
+    column-gap: 30px;
+    text-align: center;
+    justify-content: space-between;
+}

@@ -1,0 +1,88 @@
+.nav-icons{
+    display: flex;
+    align-items: flex-start;
+    column-gap: 18px;
+}
+
+.nav-icons .settings{
+    position: relative;
+}
+.nav-icons .settings .icon{
+    color: #F7C92B;
+    font-size: 36px;
+}
+.nav-icons .settings .number{
+    position:absolute;
+    color: #CC2B5A;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    top:-12px;
+    left: 0;
+    font-weight: 700;
+}
+
+.nav-icons .settings .sub-nav{
+    position: absolute;
+    left: 100%;
+    top: 100%;
+    width: 200px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.nav-icons .settings .sub-nav .setting-link{
+    display: block;
+    height: 30px;
+    color: #242424;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 0 5px;
+    transition-duration: .2s;
+}
+
+.nav-icons .settings .sub-nav .setting-link:hover{
+    background-color: #99DAE9;
+    color: #FFFFFF;
+}
+
+.nav-icons .email{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #F7C92B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3px;
+}
+.nav-icons .email .icon{
+    font-size: 22px;
+    color: white;
+}
+
+.nav-icons .noti{
+    position: relative;
+}
+.nav-icons .noti .icon{
+    color: #F7C92B;
+    font-size: 36px;
+}
+.nav-icons .noti .number{
+    position:absolute;
+    color: #E3FAFF;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #CC2B5A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    top:0;
+    right: 0;
+    font-weight: 700;
+}

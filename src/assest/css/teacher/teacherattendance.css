@@ -1,0 +1,64 @@
+.dashboard .dashboard-wrapper{
+    display: flex;
+    background-color: #F8F9FD ;
+    align-items: flex-start;
+    position: relative;
+}
+
+.dashboard .dashboard-wrapper .dashbaord-content{
+    padding: 20px 15px;
+    width: 100%;
+}
+
+.Attendance-Teacher{
+    padding: 40px 0;
+}
+.Attendance-Teacher .Attendance-Teacher-title{
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0px 40px;
+    margin-bottom: 20px;
+}
+
+.Attendance-Teacher .Attendance-Teacher-title span{
+    font-weight: 500;
+}
+
+.Attendance-Teacher .Attendance-Teacher-table-wrapper{
+    overflow-x: auto;
+}
+
+.Attendance-Teacher .Attendance-Teacher-table{
+    display: block;
+    width: 210px;
+    border-spacing: 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+@media (min-width:1280px)
+{
+    .Attendance-Teacher .Attendance-Teacher-table{
+        width: 100%;
+    }
+}
+
+.Attendance-Teacher .Attendance-Teacher-table .table-name{
+    width: 200px;
+}
+
+.Attendance-Teacher .Attendance-Teacher-table td,
+.Attendance-Teacher .Attendance-Teacher-table th{
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+}
+
+.Attendance-Teacher .Attendance-Teacher-table .Present{
+    color: #64B161;
+}
+
+.Attendance-Teacher .Attendance-Teacher-table .absent{
+    color: #F40A0A;
+}

@@ -1,0 +1,189 @@
+.teacher-register, .student-register{
+    padding-top: 50px;
+    min-height: 100vh;
+    background-color: #F8F9FD;
+}
+.teacher-register .register-top .heading , .teacher-register .register-top .hasaccount, .student-register .register-top .heading , .student-register .register-top .hasaccount{
+    font-weight: bold;
+    font-size: 22px;
+    color: #000000;
+    text-align: center;
+    letter-spacing: -0.015em;
+}
+.teacher-register .register-top .hasaccount .link, .student-register .register-top .hasaccount .link{
+    color: #18A0FB;
+}
+ .teacher-register .register-as,  .student-register .register-as{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 16px;
+}
+.teacher-register .register-as .notActive, .register-as .active, .student-register .register-as .notActive, .register-as .active{
+    width: 160px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+.teacher-register .register-as .notActive, .student-register .register-as .notActive{
+    background-color: #FFFFFF;
+}
+.teacher-register .register-as .active, .student-register .register-as .active{
+    color:#FFFFFF;
+    background-color: #18A0FB;
+}
+.teacher-register .register-process-wrapper, .student-register .register-process-wrapper{
+    max-width: 940px;
+    margin: 40px auto 0;
+}
+.teacher-register .register-through, .student-register .register-through{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.teacher-register .register-through .register-way-box, .student-register .register-through .register-way-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 170px;
+    height: 52px;
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+.teacher-register .register-through .image-way, .student-register .register-through .image-way{
+    width: 28px;
+    height: 28px;
+}
+.teacher-register .register-through .name-way, .student-register .register-through .name-way{
+    color: #989090;
+    font-size: 16px;
+    font-weight: 500;
+}
+.teacher-register .register-through .or, .student-register .register-through .or{
+    font-weight: bold;
+    color: #000000;
+    font-size: 24px;
+}
+
+.teacher-register .register-form, .student-register .register-form{
+    margin-top: 35px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+@media (min-width: 620px){
+    .teacher-register .register-form, .student-register .register-form{
+        align-items: center;
+    }
+}
+.teacher-register .register-form .form-input-wrapper, .student-register .register-form .form-input-wrapper{
+    margin-bottom: 16px;
+}
+.teacher-register .register-form .form-input-wrapper .input-title, .student-register .register-form .form-input-wrapper .input-title{
+    display: block;
+    font-weight: 700;
+    font-size: 17px;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.teacher-register .register-form .form-input-wrapper .input, .student-register .register-form .form-input-wrapper .input{
+    display: block;
+    width: 480px;
+    height: 40px;
+    max-width: 100%;
+    background: #FFFFFF;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    padding: 4px 12px;
+    letter-spacing: -0.015em;
+    color: #333;
+    font-size: 17px;
+}
+.teacher-register .register-form .form-input-wrapper .input:focus, .student-register .register-form .form-input-wrapper .input:focus{
+    border: 1px solid #18A0FB;
+}
+.teacher-register .register-form .form-input-wrapper .input.select, .student-register .register-form .form-input-wrapper .input.select{
+    padding: 4px 16px;
+    color: #000000;
+}
+
+.teacher-register .register-form .form-input-wrapper  .input.select .descripe-select, .student-register .register-form .form-input-wrapper  .input.select .descripe-select{
+    background-color: #989090;
+    color: #FFFFFF;
+}
+.teacher-register .register-form .form-input-wrapper  .input.select .descripe-select .option, .student-register .register-form .form-input-wrapper  .input.select .descripe-select .option{
+    background-color: #FFFFFF;
+    color: #000000;
+}
+.teacher-register .register-form .form-input-wrapper  .input.file{
+    display: none;
+}
+.teacher-register .register-form .form-input-wrapper .label-chooseFile{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 480px;
+    height: 40px;
+    max-width: 100%;
+    background: #FFFFFF;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    padding: 4px 12px;
+    letter-spacing: -0.015em;
+    color: #242424;
+    font-size: 17px;
+}
+.teacher-register .register-form .policy-wrapper, .student-register .register-form .policy-wrapper{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.teacher-register .register-form .policy-wrapper .input-radio, .student-register .register-form .policy-wrapper .input-radio{
+    width: 16px;
+    height: 16px;
+}
+.teacher-register .register-form .policy-wrapper .policy-label, .student-register .register-form .policy-wrapper .policy-label{
+    font-weight: 400;
+    font-size: 16px;
+    text-align: right;
+    color: #000000;
+}
+
+.teacher-register .register-btn, .student-register .register-btn{
+    background-color: #18A0FB;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 480px;
+    height: 45px;
+    max-width: 100%;
+    border-radius: 18px;
+    font-size: 22px;
+    font: bold;
+    margin: 40px auto 10px;
+}
+.teacher-register button[disabled], .student-register button[disabled]{
+    opacity: 0.5;
+}
+
+.teacher-register input, .student-register input,
+.teacher-register select, .student-register select{
+    box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.2);
+}

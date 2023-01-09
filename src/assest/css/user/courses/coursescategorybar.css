@@ -1,0 +1,38 @@
+.groups-bar .courses-content-title{
+    font-size: 22px;
+    font-weight: 700;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #C4C4C4;
+  }
+  
+  .groups-bar .bar-wrapper{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  @media (min-width: 768px) {
+    .groups-bar .bar-wrapper{
+        flex-direction: column;
+    }
+  }
+  
+  .groups-bar .link{
+    transition-duration: 300ms;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: 500;
+    display: block;
+    padding: .5rem .5rem;
+    color: #000000;
+  }
+  .groups-bar .link:hover{
+    background-color: #99DAE9;
+  }
+  
+  .groups-bar .bar-wrapper .active{
+    background-color: #99DAE9;
+  }
+  

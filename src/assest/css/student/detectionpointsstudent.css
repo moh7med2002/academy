@@ -1,0 +1,48 @@
+.detection{
+    padding: 40px 0;
+}
+.detection .detection-title{
+    font-size: 22px;
+    font-weight: 700;
+    padding: 0px 40px;
+    margin-bottom: 20px;
+}
+
+.detection-table-wrapper{
+    overflow-x: auto;
+}
+
+.detection-table{
+    display: block;
+    width: 210px;
+    border-spacing: 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+@media (min-width:1280px)
+{
+    .detection-table{
+        width: 100%;
+    }
+}
+
+.detection-table .table-name{
+    width: 170px;
+}
+
+.detection-table td,
+.detection-table th{
+    padding: 10px 6px;
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+}
+
+.detection-table .green{
+    color: #64B161;
+}
+
+.detection-table .red{
+    color: #F40A0A;
+}

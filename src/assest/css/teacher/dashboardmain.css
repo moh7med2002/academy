@@ -1,0 +1,11 @@
+.dashboard .dashboard-wrapper{
+    display: flex;
+    background-color: #F8F9FD ;
+    align-items: flex-start;
+    position: relative;
+}
+
+.dashboard-wrapper .dashbaord-content{
+    padding: 20px 15px;
+    width: 100%;
+}

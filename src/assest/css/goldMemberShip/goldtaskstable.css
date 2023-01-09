@@ -1,0 +1,206 @@
+.dashboard .dashboard-wrapper{
+    display: flex;
+    background-color: #F8F9FD ;
+    align-items: flex-start;
+    position: relative;
+}
+
+.dashboard-wrapper .dashbaord-content{
+    padding: 20px 15px;
+    width: 100%;
+}
+.dash-taks-table{
+    padding-bottom: 40px;
+}
+
+.dash-taks-table .calender-content{
+    display: grid;
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    row-gap: 20px;
+    column-gap: 30px;
+    margin-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+@media (min-width:768px)
+{
+    .dash-taks-table .calender-content{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+@media (min-width:1024px)
+{
+    .dash-taks-table .calender-content{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+}
+
+
+.dash-taks-table .calender-content .calender-box{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #FFFFFF;
+    padding: 12px 8px;
+}
+
+.dash-taks-table .calender-box .calender-details{
+    display: flex;
+    align-items: flex-start;
+    column-gap: 8px;
+}
+
+.dash-taks-table .calender-details .calender-icon{
+    font-size: 42px;
+}
+
+.dash-taks-table .calender-info .calender-summary{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+@media (min-width:640px)
+{
+    .dash-taks-table .calender-info .calender-summary{
+        font-size: 18px;
+    }
+}
+
+.dash-taks-table .calender-info .calender-date{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.dash-taks-table .calender-info .calender-day{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+@media (min-width:640px)
+{
+    .dash-taks-table .calender-info .calender-date,
+    .dash-taks-table .calender-info .calender-day{
+        font-size: 14px;
+    }
+}
+
+/* sevises and calender */
+.dash-taks-table-details{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: start;
+    flex-direction: column;
+    row-gap: 15px;
+}
+@media (min-width:640px)
+{
+    .dash-taks-table-details{
+        row-gap: 30px;
+    }
+}
+@media (min-width:1024px)
+{
+    .dash-taks-table-details{
+        flex-direction: row;
+    }
+}
+
+.dash-taks-table .dash-taks-table-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+    row-gap: 10px;
+}
+
+.dash-taks-table .dash-taks-label{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.dash-taks-table .dash-taks-table-box textarea{
+    width: 220px;
+    height: 151px;
+    resize: none;
+    padding: 6px;
+    border-radius: 4px;
+    border: none;
+}
+
+@media (min-width:640px)
+{
+    .dash-taks-table .dash-taks-table-box textarea{
+        width: 360px;
+    }
+}
+
+@media (min-width:1280px)
+{
+    .dash-taks-table .dash-taks-table-box textarea{
+        width: 450px;
+    }
+}
+
+.dash-taks-table .dash-taks-table-box input{
+    border-radius: 4px;
+    height: 30px;
+    border: none;
+    padding: 6px;
+}
+
+.dash-taks-table .dash-taks-table-box [type="time"]
+{
+    width: 100px;
+}
+
+.dash-taks-table .dash-taks-table-box textarea:focus,
+.dash-taks-table .dash-taks-table-box input:focus{
+    outline: none;
+    border:none;
+    border: 2px solid #18A0FB;
+}
+
+.dash-taks-table-details .calender-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.dash-taks-table-details .react-calendar__navigation{
+    border-bottom: 1px solid #a0a096;
+}
+.dash-taks-table-details .react-calendar{
+    width: 220px;
+}
+@media (min-width:640px)
+{
+    .dash-taks-table-details .react-calendar{
+        width: 250px;
+    }
+}
+@media (min-width:1280px)
+{
+    .dash-taks-table-details .react-calendar{
+        width: 350px;
+    }
+}
+
+.dash-taks-table .dash-taks-table-add button{
+    width: 200px;
+    max-width: 100%;
+    height: 38px;
+    background-color: #18A0FB;
+    border-radius: 12px;
+    font-size: 22px;
+    color: white;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width:768px)
+{
+    .dash-taks-table .dash-taks-table-add button{
+        width: 280px;
+        height: 45px;
+    }
+}

@@ -1,0 +1,112 @@
+.dashboard .dashboard-wrapper{
+    display: flex;
+    background-color: #F8F9FD ;
+    align-items: flex-start;
+    position: relative;
+}
+
+.dashboard-wrapper .dashbaord-content{
+    padding: 20px 15px;
+    width: 100%;
+}
+
+.StudentsHonorRoll{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.StudentsHonorRoll .StudentsHonorRoll-students-title{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+@media (min-width:768px)
+{
+    .StudentsHonorRoll .StudentsHonorRoll-students-title{
+        font-size: 22px;
+    }
+}
+
+.StudentsHonorRoll .StudentsHonorRoll-students-boxes{
+    display: grid;
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    column-gap: 30px;
+}
+@media (min-width:768px)
+{
+    .StudentsHonorRoll .StudentsHonorRoll-students-boxes{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+@media (min-width:1280px)
+{
+    .StudentsHonorRoll .StudentsHonorRoll-students-boxes{
+        column-gap: 50px;
+    }
+}
+
+.StudentsHonorRoll .student-honoraryboard{
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.StudentsHonorRoll .student-honoraryboard .student-honoraryboard-image{
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    width: 180px;
+    height: 180px;
+}
+@media (min-width:768px)
+{
+    .StudentsHonorRoll .student-honoraryboard .student-honoraryboard-image{
+        width: 276px;
+        height: 276px;
+    }
+}
+
+.StudentsHonorRoll .student-honoraryboard-header{
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.StudentsHonorRoll .student-honoraryboard-header-image{
+    width: 50px;
+    height: 50px;
+}
+
+.StudentsHonorRoll .student-honoraryboard-header .student-honoraryboard-header-name{
+    font-size: 16px;
+    font-weight: 600;
+}
+@media (min-width:768px)
+{
+    .StudentsHonorRoll .student-honoraryboard-header .student-honoraryboard-header-name{
+        font-size: 18px;
+    }
+}
+
+.StudentsHonorRoll .student-honoraryboard-summary{
+    font-size: 14px;
+    font-weight: 400;
+    padding-right: 15px;
+    padding-left: 6px;
+}
+@media (min-width:640px)
+{
+    .StudentsHonorRoll .student-honoraryboard-summary{
+        font-size: 16px;
+    }
+}
+@media (min-width:768px)
+{
+    .StudentsHonorRoll .student-honoraryboard-summary{
+        font-size: 18px;
+    }
+}

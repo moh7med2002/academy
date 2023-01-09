@@ -1,0 +1,76 @@
+.mySingleExam-title{
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.015em;
+    color: #000000;
+    padding: 10px;
+    margin-top: 10px;
+}
+@media (min-width:640px)
+{
+    .mySingleExam-title{
+        font-size: 28px;
+        padding: 20px;
+    }
+}
+.single-exam-image-wrapper{
+    margin: 20px 0;
+    padding:0 10px;
+}
+@media (min-width:640px)
+{
+    .single-exam-image-wrapper{
+        padding:0 20px;
+    }
+}
+.single-exam-image-wrapper .image{
+    border-radius: 8px;
+    width: 497.45px;
+    height: 251px;
+    max-width: 100%;
+}
+
+.exam-detail{
+    margin: 20px 0;
+    padding:0 10px;
+}
+@media (min-width:640px)
+{
+    .exam-detail{
+        padding:0 20px;
+    }
+}
+
+.exam-detail .title-heading , .group-link-wrapper .title-heading , .group-link-wrapper .links{
+    font-weight: bold;
+    color: #000000;
+    font-size: 16px;
+}
+
+.exam-detail .title-description{
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    padding: 5px 20px;
+}
+
+@media (min-width:640px)
+{
+    .exam-detail .title-heading , .exam-detail .title-description, .group-link-wrapper .title-heading ,.group-link-wrapper .links{
+        font-size: 20px;
+    }
+}
+
+.group-link-wrapper{
+    padding: 10px 10px;
+}
+@media (min-width:640px)
+{
+    .group-link-wrapper{
+        padding:0 20px;
+    }
+}
+
+.group-link-wrapper .links{
+    color: #18A0FB;
+}
