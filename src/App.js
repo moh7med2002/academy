@@ -56,6 +56,11 @@ import TeacherSingleGroup from "./pages/teacherDash/TeacherSingleGroup";
 import TeacherGroupLessons from "./pages/teacherDash/TeacherGroupLessons";
 import TeacherGroupStudents from "./pages/teacherDash/TeacherGroupStudents";
 import NotLogin from './NotLogin'
+import TeacherPsychos from "./pages/teacherDash/TeacherPsychos";
+import TeacherSinglePsycho from "./pages/teacherDash/TeacherSinglePsycho";
+import SessionManagement from "./pages/teacherDash/TeacherManagmentSession";
+import TeacherSessions from "./pages/teacherDash/TeacherSessions";
+import StudentSessions from "./pages/studentDash/StudentSessions";
 
 const theme = createTheme({
   direction: 'rtl',
@@ -98,6 +103,10 @@ function App() {
             {/** forums section */}
             <Route path="forums" element={<Forums />} />
             <Route path="forums/:forumId" element={<SingleForum />}/>
+            {/** psychologist section */}
+            <Route path="psychologist" element={<Physchologist />} />
+            <Route path="psychologist/sessions" element={<PsychologistSessions />}/>
+            <Route path="psychologist/request/:sessionId" element={<RequestSession />}/>
           </Route>
 
           {/* login and register routes new */}
@@ -114,6 +123,7 @@ function App() {
             <Route path="student-dash/studentWallet" element={currentUser?<StudentWallet/>:<Navigate to={'/login/student'}/>}/>
             <Route path="student-dash/studentCourses" element={currentUser?<StudentCourses/>:<Navigate to={'/login/student'}/>}/>
             <Route path="student-dash/studentGroups" element={currentUser?<StudentGroups/>:<Navigate to={'/login/student'}/>}/>
+            <Route path="student-dash/studentSessions" element={currentUser?<StudentSessions/>:<Navigate to={'/login/student'}/>}/>
             <Route path="profile" element={currentUser?<Profile/>:<Navigate to={'/login/student'}/>}/>
 
             {/** teacher dashboard new */}
@@ -128,22 +138,16 @@ function App() {
             <Route path="teacher-dash/courses/:courseId/units/:unitId/exams" element={currentTeacher?<TeacherExams/>:<Navigate to={'/login/teacher'}/>}/>
             <Route path="courses/:courseId/units/:unitId/exams/:examId/questions" element={currentTeacher?<TeacherQuestions/>:<Navigate to={'/login/teacher'}/>}/>
             <Route path="/exams/:examId/marks" element={currentTeacher?<TeacherGrades/>:<Navigate to={'/login/teacher'}/>}/>
+            <Route path="/teacher-dash/psychos" element={currentTeacher?<TeacherPsychos/>:<Navigate to={'/login/teacher'}/>}/>
+            <Route path="/teacher-dash/psychos/:id" element={currentTeacher?<TeacherSinglePsycho/>:<Navigate to={'/login/teacher'}/>}/>
+            <Route path="/teacher-dash/psychos/:id/sessions" element={currentTeacher?<SessionManagement/>:<Navigate to={'/login/teacher'}/>}/>
+            <Route path="/teacher-dash/psychos/:id/sessionsAccepted" element={currentTeacher?<TeacherSessions/>:<Navigate to={'/login/teacher'}/>}/>
 
            {/** not use pages */}
           <Route path="parent" element={<MainChartPage />}>
             <Route index element={<LandParentPage />} />
             <Route path="chart" element={<ChartPage />} />
           </Route>
-
-            <Route path="psychologist" element={<Physchologist />} />
-            <Route
-              path="psychologist/sessions"
-              element={<PsychologistSessions />}
-            />
-            <Route
-              path="psychologist/request/:sessionId"
-              element={<RequestSession />}
-            />
             <Route path="videoLessons" element={<VideoLessons />} />
             <Route
               path="videoLessons/search"

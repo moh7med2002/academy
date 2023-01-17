@@ -1,12 +1,10 @@
 import React from 'react'
 import Layout from '../../components/teacherDash/Layout'
-import {styled,Table,TableBody,TableHead,TableCell,TableRow,CircularProgress,Box, Button, Dialog} from '@mui/material'
+import {styled,Table,TableBody,TableHead,TableCell,TableRow,CircularProgress,Box} from '@mui/material'
 import  { tableCellClasses } from '@mui/material/TableCell';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import {useParams} from 'react-router-dom'
-import AddGroupLesson from '../../components/teacherDash/AddGroupLesson';
-import UpdateGroupLesson from '../../components/teacherDash/UpdateGroupLesson';
 
 const Text = styled("h3")({})
 const StyledTableCell = styled(TableCell)(({ theme }) => ({

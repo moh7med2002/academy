@@ -13,10 +13,10 @@ return (
         <Link to={'/psychologist/sessions'}  className={`link ${window.location.pathname==="/psychologist/sessions"&&"active"}`} 
             >جلسات الاخصائي النفسي 
         </Link>
-        <Link to={'/psychologist/request/'+1}  className={`link ${window.location.pathname.includes('/psychologist/request')&&"active"}`} 
-            >طلب جلسة اخصائي نفسي 
+        <Link to={'/student-dash/studentSessions'}  className={`link ${window.location.pathname.includes('/psychologist/request')&&"active"}`} 
+            >جلساتي النفسية 
         </Link>
     </ul>
 </div>
-  )
+)
 }

@@ -47,7 +47,7 @@ export default function StudentGroups() {
                         )
                     })
                     :
-                    <Typography>لم يتم الاشتراك بمجموعات</Typography>
+                    <Typography sx={{margin:"16px",fontSize:"18px",fontWeight:"600"}}>لم يتم الاشتراك بمجموعات</Typography>
                 }
             </Grid>
         </Layout>

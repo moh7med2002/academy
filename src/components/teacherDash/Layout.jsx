@@ -58,14 +58,21 @@ function Layout(props) {
             <Link to="/teacher-dash/courses">
                 <ListItem  disablePadding>
                     <ListItemButton>
-                    <Text>دوراتي</Text>
+                    <Text>الدورات</Text>
                     </ListItemButton>
                 </ListItem>
             </Link>
             <Link to="/teacher-dash/groups">
                 <ListItem  disablePadding>
                     <ListItemButton>
-                    <Text>مجموعاتي</Text>
+                    <Text>المجموعات</Text>
+                    </ListItemButton>
+                </ListItem>
+            </Link>
+            <Link to="/teacher-dash/psychos">
+                <ListItem  disablePadding>
+                    <ListItemButton>
+                    <Text>الجلسات النفسية</Text>
                     </ListItemButton>
                 </ListItem>
             </Link>

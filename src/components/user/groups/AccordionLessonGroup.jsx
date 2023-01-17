@@ -9,20 +9,11 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 export default function AccordionLessonGroup({lesson}) {
 
-    const currentDate = moment(new Date()).format("YYYY-MM-DD")
     const lessonDate = lesson.day.split('T')[0]
     const [start,setStart] = useState(null)
 
     useEffect(()=>
     {
-        // if(new Date(currentDate).getTime()<new Date(lessonDate).getTime())
-        // {
-        //     setStart(0)
-        // }
-        // else if(new Date(currentDate).getTime()>new Date(lessonDate).getTime())
-        // {
-        //     setStart(2)
-        // }
             const startDate = new Date(`${lessonDate} , ${lesson.startTime}`).getTime()
             const EndDate = new Date(`${lessonDate} , ${lesson.EndTime}`).getTime()
             const currentDate = new Date().getTime()
