@@ -61,6 +61,7 @@ import TeacherSinglePsycho from "./pages/teacherDash/TeacherSinglePsycho";
 import SessionManagement from "./pages/teacherDash/TeacherManagmentSession";
 import TeacherSessions from "./pages/teacherDash/TeacherSessions";
 import StudentSessions from "./pages/studentDash/StudentSessions";
+import StudentNotifications from "./pages/studentDash/StudentNotifications";
 
 const theme = createTheme({
   direction: 'rtl',
@@ -125,6 +126,7 @@ function App() {
             <Route path="student-dash/studentGroups" element={currentUser?<StudentGroups/>:<Navigate to={'/login/student'}/>}/>
             <Route path="student-dash/studentSessions" element={currentUser?<StudentSessions/>:<Navigate to={'/login/student'}/>}/>
             <Route path="profile" element={currentUser?<Profile/>:<Navigate to={'/login/student'}/>}/>
+            <Route path="notifications" element={currentUser?<StudentNotifications/>:<Navigate to={'/login/student'}/>}/>
 
             {/** teacher dashboard new */}
             <Route path="teacher-dash" element={currentTeacher?<HomeTeacherDash/>:<Navigate to={'/login/teacher'}/>}/>

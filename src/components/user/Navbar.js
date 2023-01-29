@@ -1,12 +1,14 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { HiOutlineSearch } from "react-icons/hi";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import "../../assest/css/user/Navbar.css";
 import logo from "../../images/logo.png";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../redux/userSilce";
 import { useNavigate } from "react-router-dom";
+import {Button} from "@mui/material";
+import { Box } from "@mui/system";
+import NotificationBadge from "./NotificationBadge";
 
 export default function Navbar() {
   const [showNav, setshowNav] = useState(false);
@@ -82,33 +84,16 @@ export default function Navbar() {
                   لوحة التحكم
                 </NavLink>}
               </div>
-              {/* <form className="search-form-second">
-                <button className="search-icon">
-                  <HiOutlineSearch />
-                </button>
-                <input
-                  className="search-input"
-                  type={"search"}
-                  placeholder="ابحث"
-                />
-              </form> */}
               {currentUser ? (
-                <button
-                  style={{
-                    fontWeight: "600",
-                    color: "#18A0FB",
-                    padding: "10px",
-                    border: "1px solid #18A0FB",
-                    borderRadius: "4px",
-                  }}
-                  onClick={() => {
-                    dispatch(logout());
-                    navigate('/')
-                  }}
-                  className="register-link "
-                >
-                  تسجيل خروج
-                </button>
+                <Box sx={{display:"flex",columnGap:"30px",rowGap:"20px",alignItems:"center",flexDirection:{xl:"row",xs:"column"}}}>
+                  <NotificationBadge/>
+                  <Button variant="contained" onClick={() => {
+                      dispatch(logout());
+                      navigate('/')
+                    }}>
+                    تسجيل الخروج
+                  </Button>
+                </Box>
               ) : (
                 <div className="register-links-wrapper">
                   <Link to={"/register/teacher"} className="register-link">

@@ -24,7 +24,7 @@
     gap: 0px 16px;
     flex-grow: 1;
 }
-@media (min-width:1280px)
+@media (min-width:1290px)
 {
     .nav-logo{
         flex-grow: 0;
@@ -58,7 +58,7 @@
         gap:0 50px;
     }
 }
-@media (min-width:1280px)
+@media (min-width:1290px)
 {
     .search-form-first{
         display: none;
@@ -84,7 +84,7 @@
     display: grid;
     place-items: center;
 }
-@media (min-width:1280px)
+@media (min-width:1290px)
 {
     .toggle-show{
         display: none;
@@ -103,7 +103,7 @@
     height: calc(100vh - 80px);
     transition: all 0.2s ease-out;
 }
-@media (min-width:1280px)
+@media (min-width:1290px)
 {
     .links-wrapper{
         transition: all 0s ease-out;
@@ -136,7 +136,7 @@
 .links-wrapper.notShow{
     left: -300px;
 }
-@media (min-width:1280px)
+@media (min-width:1290px)
 {
     .navBar:has(.links-wrapper.show) + .page-overlay::before{
         content: '';
@@ -159,7 +159,7 @@
     flex-direction: column;
     margin-bottom: 16px;
 }
-@media (min-width:1280px)
+@media (min-width:1290px)
 {
     .pages-links-wrapper{
         gap:12px 12px;
@@ -200,7 +200,7 @@
     padding: 8px;
     order: -1;
 }
-@media (min-width: 1280px) {
+@media (min-width: 1290px) {
     .search-form-second{
         order: 0;
     }
@@ -221,7 +221,7 @@
     flex-direction: column;
     margin-bottom: 16px;
 }
-@media (min-width:1280px)
+@media (min-width:1290px)
 {
     .register-links-wrapper{
         margin-bottom: 0px;

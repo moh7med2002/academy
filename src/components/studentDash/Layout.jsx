@@ -104,6 +104,13 @@ function Layout(props) {
                     </ListItemButton>
                 </ListItem>
             </Link>
+            <Link to="/notifications">
+                <ListItem  disablePadding>
+                    <ListItemButton>
+                    <Text>إشعاراتي</Text>
+                    </ListItemButton>
+                </ListItem>
+            </Link>
         </List>
         </div>
     );
