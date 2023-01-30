@@ -5,10 +5,15 @@ import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import {useSelector} from 'react-redux'
+import {useSnackbar} from 'notistack'
 
 export default function AddStudents() {
     const [value, setValue] = useState([]);
     const [students,setStduents] = useState([])
+    const { currentParent } = useSelector((state) => state.parent);
+    const {enqueueSnackbar,closeSnackbar} = useSnackbar()
+    const [load,setLoad] = useState(false)
 
     useEffect(()=>
     {
@@ -26,6 +31,38 @@ export default function AddStudents() {
       }
       getAllStudents()
     },[])
+
+    async function handelPushStudents()
+    {
+      const newStudents = value.map((item,index)=>
+      {
+        return item.id
+      })
+      try{
+          setLoad(true)
+          closeSnackbar()
+          const response = await fetch(`${process.env.REACT_APP_API}/api/parent/students/add`,{
+          method:"POST",
+          headers:{
+            'Content-Type':'application/json',
+            'Authorization':currentParent.token
+          },
+          body:JSON.stringify({students:newStudents})
+        })
+        if(response.status!==200&&response.status!==201)
+        {
+          setLoad(false)
+          throw new Error('failed occured')
+        }
+        setLoad(false)
+        const data = await response.json()
+        enqueueSnackbar(data.message,{variant:"success",autoHideDuration:8000})
+      }
+      catch(err)
+      {
+        console.log(err)
+      }
+    }
     
     return (
         <LayoutParent>
@@ -49,7 +86,10 @@ export default function AddStudents() {
                 />
                 )}
             />}
-            <Button sx={{marginTop:"20px"}} variant="contained">حفظ</Button>
+            {!load?
+              <Button sx={{marginTop:"20px"}} variant="contained" onClick={handelPushStudents}>حفظ</Button>
+            :
+            <Button sx={{marginTop:"20px"}} variant="contained">حفظ ...</Button>}
             </Container>
         </LayoutParent>
     )
