@@ -53,6 +53,7 @@ export default function TeacherRegister() {
             <div className='register-as'>
                 <Link to={"/register/student"} className="notActive">تسجيل كطالب </Link>
                 <Link to={"/register/teacher"} className="active">تسجيل كمعلم </Link>
+                <Link to={"/register/parent"} className="notActive">تسجيل كأب </Link>
             </div>
            <div className='register-process-wrapper'>
               <form onSubmit={handleSubmit(onSubmit)} className='register-form'>

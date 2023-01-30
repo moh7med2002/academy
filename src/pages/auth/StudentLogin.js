@@ -30,15 +30,12 @@ export default function StudentLogin() {
       .then((res) => {
         if(res.ok){
           return res.json()
-         }else{
-          return Promise.reject(res.json())
-         }
+          }else{
+            return Promise.reject(res.json())
+          }
       })
       .then((info) => {
-        console.log(info);
         dispatch(successLogin({user: info}))
-        // setUser(JSON.stringify(info));
-        // localStorage.setItem('academy-user', JSON.stringify(info));
         navigate('/');
         setLoading(false);
       })

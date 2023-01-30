@@ -62,6 +62,10 @@ import SessionManagement from "./pages/teacherDash/TeacherManagmentSession";
 import TeacherSessions from "./pages/teacherDash/TeacherSessions";
 import StudentSessions from "./pages/studentDash/StudentSessions";
 import StudentNotifications from "./pages/studentDash/StudentNotifications";
+import ParentHome from "./pages/parentDash/ParentHome";
+import AddStudents from "./pages/parentDash/AddStudents";
+import ParentViewStudent from "./pages/parentDash/ParentViewStudent";
+import ParentRegister from "./pages/auth/ParentRegister";
 
 const theme = createTheme({
   direction: 'rtl',
@@ -76,6 +80,7 @@ const theme = createTheme({
 function App() {
   const { currentUser } = useSelector((state) => state.user);
   const { currentTeacher } = useSelector((state) => state.teacher);
+  const { currentParent } = useSelector((state) => state.parent);
 
   return (
     <ThemeProvider theme={theme}>
@@ -113,6 +118,7 @@ function App() {
           {/* login and register routes new */}
           <Route path="register/teacher" element={<TeacherRegister />} />
           <Route path="register/student" element={<StudentRegister />} />
+          <Route path="register/parent" element={<ParentRegister/>} />
           <Route path="login/teacher" element={<TeacherLogin />} />
           <Route path="login/student" element={<StudentLogin />} />
           <Route path="forgot-password" element={<ForgotPassword />} />
@@ -145,6 +151,11 @@ function App() {
             <Route path="/teacher-dash/psychos/:id/sessions" element={currentTeacher?<SessionManagement/>:<Navigate to={'/login/teacher'}/>}/>
             <Route path="/teacher-dash/psychos/:id/sessionsAccepted" element={currentTeacher?<TeacherSessions/>:<Navigate to={'/login/teacher'}/>}/>
 
+          {/** parent dashboard */}
+          <Route path="parent-dash" element={currentParent?<ParentHome/>:<Navigate to={'/login/parent'}/>}/>
+          <Route path="parent-dash/add-students" element={currentParent?<AddStudents/>:<Navigate to={'/login/parent'}/>}/>
+          <Route path="parent-dash/student/:id" element={currentParent?<ParentViewStudent/>:<Navigate to={'/login/parent'}/>}/>
+          
            {/** not use pages */}
           <Route path="parent" element={<MainChartPage />}>
             <Route index element={<LandParentPage />} />

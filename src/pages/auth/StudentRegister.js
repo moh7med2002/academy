@@ -96,6 +96,7 @@ export default function StudentRegister() {
           <Link to={"/register/teacher"} className="notActive">
             تسجيل كمعلم{" "}
           </Link>
+          <Link to={"/register/parent"} className="notActive">تسجيل كأب </Link>
         </div>
         <div className="register-process-wrapper">
           <form onSubmit={handleSubmit(onSubmit)} className="register-form">
