@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "../../../assest/css/user/forums/forum.css";
 
-export default function Forums({ forum }) {
+export default function Forum({ forum }) {
   const navigate = useNavigate();
 
   async function joinForum() {
