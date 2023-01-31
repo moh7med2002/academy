@@ -108,7 +108,7 @@ function App() {
             <Route path="memberships/regular" element={<ReqularMemberShipPage />}/>
             {/** forums section */}
             <Route path="forums" element={<Forums />} />
-            <Route path="forums/:forumId" element={<SingleForum />}/>
+            <Route path="forums/:forumId"element={currentUser?<SingleForum/>:<Navigate to={'/login/student'}/>}/>
             {/** psychologist section */}
             <Route path="psychologist" element={<Physchologist />} />
             <Route path="psychologist/sessions" element={<PsychologistSessions />}/>
