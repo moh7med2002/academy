@@ -68,6 +68,7 @@ import ParentViewStudent from "./pages/parentDash/ParentViewStudent";
 import ParentRegister from "./pages/auth/ParentRegister";
 import TeacherProfile from "./pages/teacherDash/TeacherProfile";
 import GroupDetails from "./pages/user/groups/GroupDetails";
+import SingleGroupLesson from "./pages/user/groups/SingleGroupLesson";
 
 const theme = createTheme({
   direction: 'rtl',
@@ -104,6 +105,7 @@ function App() {
             <Route path="groups/:id" element={currentUser?<SingleGropup/>:<NotLogin/>}/>
             <Route path="groups/:id/lessons" element={currentUser?<GroupLessons/>:<NotLogin/>}/>
             <Route path="groups/:id/details" element={currentUser?<GroupDetails/>:<NotLogin/>}/>
+            <Route path="group/:groupId/lesson/:lessonId" element={currentUser?<SingleGroupLesson/>:<NotLogin/>}/>
             {/** membership section */}
             <Route path="memberships" element={<MemberShipsPage />} />
             <Route path="memberships/golden" element={<GoldenMemberShipPage />}/>
