@@ -92,8 +92,8 @@ export default function SingleGropup() {
                     </Button>
                   </div>}
                   {isRegister&&
-                    <Button variant="contained" sx={{wdith:"150px",marginTop:"30px"}} onClick={()=>navigate(`/groups/${group.id}/lessons`)}>
-                      مشاهدة الدروس
+                    <Button variant="contained" sx={{wdith:"150px",marginTop:"30px"}} onClick={()=>navigate(`/groups/${group.id}/details`)}>
+                      مشاهدة 
                     </Button>
                   }
                 </div>

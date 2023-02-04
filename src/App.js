@@ -67,6 +67,7 @@ import AddStudents from "./pages/parentDash/AddStudents";
 import ParentViewStudent from "./pages/parentDash/ParentViewStudent";
 import ParentRegister from "./pages/auth/ParentRegister";
 import TeacherProfile from "./pages/teacherDash/TeacherProfile";
+import GroupDetails from "./pages/user/groups/GroupDetails";
 
 const theme = createTheme({
   direction: 'rtl',
@@ -102,6 +103,7 @@ function App() {
             <Route path="groups" element={currentUser?<Groups />:<NotLogin/>}/>
             <Route path="groups/:id" element={currentUser?<SingleGropup/>:<NotLogin/>}/>
             <Route path="groups/:id/lessons" element={currentUser?<GroupLessons/>:<NotLogin/>}/>
+            <Route path="groups/:id/details" element={currentUser?<GroupDetails/>:<NotLogin/>}/>
             {/** membership section */}
             <Route path="memberships" element={<MemberShipsPage />} />
             <Route path="memberships/golden" element={<GoldenMemberShipPage />}/>
@@ -153,10 +155,10 @@ function App() {
             <Route path="/teacher-dash/psychos/:id/sessionsAccepted" element={currentTeacher?<TeacherSessions/>:<Navigate to={'/login/teacher'}/>}/>
             <Route path="/teacher-dash/profile" element={currentTeacher?<TeacherProfile/>:<Navigate to={'/login/teacher'}/>}/>
 
-          {/** parent dashboard */}
-          <Route path="parent-dash" element={currentParent?<ParentHome/>:<Navigate to={'/login/parent'}/>}/>
-          <Route path="parent-dash/add-students" element={currentParent?<AddStudents/>:<Navigate to={'/login/parent'}/>}/>
-          <Route path="parent-dash/student/:id" element={currentParent?<ParentViewStudent/>:<Navigate to={'/login/parent'}/>}/>
+            {/** parent dashboard */}
+            <Route path="parent-dash" element={currentParent?<ParentHome/>:<Navigate to={'/login/parent'}/>}/>
+            <Route path="parent-dash/add-students" element={currentParent?<AddStudents/>:<Navigate to={'/login/parent'}/>}/>
+            <Route path="parent-dash/student/:id" element={currentParent?<ParentViewStudent/>:<Navigate to={'/login/parent'}/>}/>
           
            {/** not use pages */}
           <Route path="parent" element={<MainChartPage />}>
