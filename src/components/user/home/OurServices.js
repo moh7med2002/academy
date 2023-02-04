@@ -65,7 +65,7 @@ return (
                                     <img src={da.image} alt=""/>
                                 </div>
                                 <h3 className='box-title'>{da.title}</h3>
-                                <Link to={'/'+da.link} className="lessons-link">عرض الدروس</Link>
+                                <Link to={'/'+da.link} className="lessons-link">{` عرض ${da.title}`}</Link>
                             </div>
                             <p className='box-descirption'>{da.text}</p>
                         </div>

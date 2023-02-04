@@ -37,6 +37,7 @@ export default function TeacherLogin() {
     }
     catch(err)
     {
+      setLoading(false)
       console.log(err)
     }
   }
