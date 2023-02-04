@@ -13,11 +13,15 @@ const initialState = {
         },
         logout:(state)=>{
             state.currentTeacher=null;
+        },
+        updateTeacher:(state,action)=>
+        {
+        state.currentTeacher.teacher = action.payload.teacher
         }
     },
     })
 
 // Action creators are generated for each case reducer function
-export const { successLogin ,logout} = teacherSlice.actions
+export const { successLogin ,logout,updateTeacher} = teacherSlice.actions
 
 export default teacherSlice.reducer

@@ -66,6 +66,7 @@ import ParentHome from "./pages/parentDash/ParentHome";
 import AddStudents from "./pages/parentDash/AddStudents";
 import ParentViewStudent from "./pages/parentDash/ParentViewStudent";
 import ParentRegister from "./pages/auth/ParentRegister";
+import TeacherProfile from "./pages/teacherDash/TeacherProfile";
 
 const theme = createTheme({
   direction: 'rtl',
@@ -150,6 +151,7 @@ function App() {
             <Route path="/teacher-dash/psychos/:id" element={currentTeacher?<TeacherSinglePsycho/>:<Navigate to={'/login/teacher'}/>}/>
             <Route path="/teacher-dash/psychos/:id/sessions" element={currentTeacher?<SessionManagement/>:<Navigate to={'/login/teacher'}/>}/>
             <Route path="/teacher-dash/psychos/:id/sessionsAccepted" element={currentTeacher?<TeacherSessions/>:<Navigate to={'/login/teacher'}/>}/>
+            <Route path="/teacher-dash/profile" element={currentTeacher?<TeacherProfile/>:<Navigate to={'/login/teacher'}/>}/>
 
           {/** parent dashboard */}
           <Route path="parent-dash" element={currentParent?<ParentHome/>:<Navigate to={'/login/parent'}/>}/>
