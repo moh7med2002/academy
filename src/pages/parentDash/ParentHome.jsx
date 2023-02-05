@@ -47,7 +47,7 @@ export default function ParentHome() {
                                     <Paper sx={{padding:"8px 6px",display:"flex",flexDirection:"column",alignItems:"center"}}>
                                         <Avatar alt={student.name} src={`${process.env.REACT_APP_API}/images/${student.image}`} 
                                         sx={{width:"105px",height:"105px",fontSize:"42px"}}/>
-                                        <Typography sx={{fontWeight:"500",marginY:"10px",fontSize:"18px"}}>الطالب : {student.name} </Typography>
+                                        <Typography sx={{fontWeight:"500",marginY:"10px",fontSize:"18px",minHeight:"50px",textAlign:"center"}}>الطالب : {student.name} </Typography>
                                         <Button onClick={()=>navigate(`/parent-dash/student/${student.id}`)}>مشاهدة</Button>
                                     </Paper>
                                 </Grid>

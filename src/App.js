@@ -69,6 +69,7 @@ import ParentRegister from "./pages/auth/ParentRegister";
 import TeacherProfile from "./pages/teacherDash/TeacherProfile";
 import GroupDetails from "./pages/user/groups/GroupDetails";
 import SingleGroupLesson from "./pages/user/groups/SingleGroupLesson";
+import ParentNotifications from "./pages/parentDash/ParentNotifications";
 
 const theme = createTheme({
   direction: 'rtl',
@@ -161,6 +162,7 @@ function App() {
             <Route path="parent-dash" element={currentParent?<ParentHome/>:<Navigate to={'/login/parent'}/>}/>
             <Route path="parent-dash/add-students" element={currentParent?<AddStudents/>:<Navigate to={'/login/parent'}/>}/>
             <Route path="parent-dash/student/:id" element={currentParent?<ParentViewStudent/>:<Navigate to={'/login/parent'}/>}/>
+            <Route path="parent-dash/notifications" element={currentParent?<ParentNotifications/>:<Navigate to={'/login/parent'}/>}/>
           
            {/** not use pages */}
           <Route path="parent" element={<MainChartPage />}>

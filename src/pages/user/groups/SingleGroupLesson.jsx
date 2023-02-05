@@ -29,7 +29,7 @@ export default function SingleGroupLesson() {
                 <Typography sx={{fontSize:"18px",fontWeight:"400",padding:"9px 12px",marginBottom:"14px"}}>السابعة مساء 7.00 م</Typography>
                 <Title>الرابط / </Title>
                 <Typography sx={{fontSize:"18px",fontWeight:"400",padding:"9px 12px",marginBottom:"14px"}}>
-                    <LinkReact href='/www.gnsrrvfgnb vfbfhfg ghvfvfhv bgfinfb gigngfnbglmb'>www.gnsrrvfgnb vfbfhfg ghvfvfhv bgfinfb gigngfnbglmb</LinkReact>
+                    <LinkReact target="_blank" href='/www.gnsrrvfgnb vfbfhfg ghvfvfhv bgfinfb gigngfnbglmb'>www.gnsrrvfgnb vfbfhfg ghvfvfhv bgfinfb gigngfnbglmb</LinkReact>
                 </Typography>
             </Box>
         </Box>
