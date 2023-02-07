@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../../../assest/css/user/forums/singleForum.css";
 import * as React from "react";
+import { Button } from '@mui/material'
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
@@ -16,6 +17,8 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import Dialog from '@mui/material/Dialog';
+import AddPost from '../../../components/user/forums/AddPost'
 
 export default function SingleForum() {
   const params = useParams();
@@ -37,8 +40,8 @@ export default function SingleForum() {
           }
         );
         const data = await response.json();
-        console.log(data);
-        setForum(data);
+        console.log(data.forum, 'dattttttttttt');
+        setForum(data.forum);
       } catch (err) {
         console.log(err);
       }
@@ -57,7 +60,7 @@ export default function SingleForum() {
           }
         );
         const data = await response.json();
-        console.log(data);
+        console.log(data, 'posts');
         setPosts(data.posts);
       } catch (err) {
         console.log(err);
@@ -78,7 +81,7 @@ export default function SingleForum() {
         }
       );
       const data = await response.json();
-      console.log(data);
+      console.log(data, 'comments');
       setPosts(data.posts);
     } catch (err) {
       console.log(err);
@@ -102,11 +105,22 @@ export default function SingleForum() {
     setExpanded(!expanded);
   };
 
+
+  const [openProfile, setOpenProfile] = useState(false)
+  function handleCloseProfileDialog() {
+    setOpenProfile(false)
+  }
+
   return (
     <div>
-      <h1 style={{ margin: 100 }}>{`نادي${forum.title}`}</h1>
-      {posts.map((post) => {
-        <Card sx={{ maxWidth: 1000, margin: 130 }}>
+      <h1 style={{ marginTop: 100, marginBottom: 30, marginRight: 50 }}>{`نادي${forum.title}`}</h1>
+      <Button style={{ marginRight: 50 }} variant="contained" onClick={() => setOpenProfile(true)}>إضافة منشور</Button>
+
+      <Dialog open={openProfile} onClose={handleCloseProfileDialog}>
+                      <AddPost forum={forum} openProfile={openProfile} handleCloseProfileDialog={handleCloseProfileDialog}/>
+                  </Dialog>
+      {posts.length === 0 ? <div>لا يوجد منشورات</div> : posts.map((post) => {
+        <Card sx={{ maxWidth: 345 }}>
           <CardHeader
             avatar={
               <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -120,12 +134,6 @@ export default function SingleForum() {
             }
             title="Shrimp and Chorizo Paella"
             subheader="September 14, 2016"
-          />
-          <CardMedia
-            component="img"
-            height="194"
-            image="/static/images/cards/paella.jpg"
-            alt="Paella dish"
           />
           <CardContent>
             <Typography variant="body2" color="text.secondary">
@@ -141,20 +149,19 @@ export default function SingleForum() {
             </IconButton>
             <ExpandMore
               expand={expanded}
+              aria-expanded={expanded}
+              aria-label="show more"
               onClick={() => {
                 getComments(post.id)
                 handleExpandClick()
               }
               }
-              aria-expanded={expanded}
-              aria-label="show more"
             >
               <ExpandMoreIcon />
             </ExpandMore>
           </CardActions>
           <Collapse in={expanded} timeout="auto" unmountOnExit>
             <CardContent>
-              <Typography paragraph>Method:</Typography>
               {comments.map((comment) => {
                 <Typography paragraph>
                   {comment.text}
