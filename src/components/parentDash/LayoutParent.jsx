@@ -21,6 +21,7 @@ import Toolbar from '@mui/material/Toolbar';
 import {useNavigate} from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import {logout} from '../../redux/parentSlice'
+import { useState } from 'react';
 
 const Image = styled('img')({
     width:"63px",
@@ -39,6 +40,8 @@ function LayoutParant(props) {
         setMobileOpen((prevState) => !prevState);
     };
 
+    const [numberOfNotifications,setNumberOfNotifications] = useState(0)
+
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
         <Typography variant="h6" sx={{ my: 2 }} color="black">
@@ -46,8 +49,8 @@ function LayoutParant(props) {
         </Typography>
         <Divider />
         <List>
-            <Button sx={{marginTop:"6px"}}>
-                <Badge badgeContent={1} color="error"><NotificationsIcon/></Badge>
+            <Button sx={{marginTop:"6px"}} onClick={()=>navigate('/parent-dash/notifications')}>
+                <Badge badgeContent={numberOfNotifications} color="error"><NotificationsIcon/></Badge>
             </Button>
             <Link to="/parent-dash">
                 <ListItem disablePadding>
@@ -100,8 +103,8 @@ function LayoutParant(props) {
                 أكاديميتنا
             </Typography>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                <Button>
-                    <Badge badgeContent={1} color="error"><NotificationsIcon/></Badge>
+                <Button onClick={()=>navigate('/parent-dash/notifications')}>
+                    <Badge badgeContent={numberOfNotifications} color="error"><NotificationsIcon/></Badge>
                 </Button>
                 <Button sx={{ color: '#424242',fontSize:"15px",fontWeight:"500"}} onClick={()=>navigate('/parent-dash')}>
                     الرئيسية 
