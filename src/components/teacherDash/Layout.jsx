@@ -83,6 +83,13 @@ function Layout(props) {
                     </ListItemButton>
                 </ListItem>
             </Link>
+            <Link to="/teacher-dash/forums">
+                <ListItem  disablePadding>
+                    <ListItemButton>
+                    <Text>النوادي</Text>
+                    </ListItemButton>
+                </ListItem>
+            </Link>
         </List>
         </div>
     );

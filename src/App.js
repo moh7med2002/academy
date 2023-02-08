@@ -70,6 +70,7 @@ import TeacherProfile from "./pages/teacherDash/TeacherProfile";
 import GroupDetails from "./pages/user/groups/GroupDetails";
 import SingleGroupLesson from "./pages/user/groups/SingleGroupLesson";
 import ParentNotifications from "./pages/parentDash/ParentNotifications";
+import TeacherForums from "./pages/teacherDash/TeacherForums";
 
 const theme = createTheme({
   direction: 'rtl',
@@ -157,6 +158,10 @@ function App() {
             <Route path="/teacher-dash/psychos/:id/sessions" element={currentTeacher?<SessionManagement/>:<Navigate to={'/login/teacher'}/>}/>
             <Route path="/teacher-dash/psychos/:id/sessionsAccepted" element={currentTeacher?<TeacherSessions/>:<Navigate to={'/login/teacher'}/>}/>
             <Route path="/teacher-dash/profile" element={currentTeacher?<TeacherProfile/>:<Navigate to={'/login/teacher'}/>}/>
+            <Route path="teacher-dash/forums" element={currentTeacher?<TeacherForums/>:<Navigate to={'/login/teacher'}/>}/>
+            <Route path="/teacher-dash/forum/:forumId" element={currentTeacher?<SingleForum/>:<Navigate to={'/login/teacher'}/>}/>
+
+
 
             {/** parent dashboard */}
             <Route path="parent-dash" element={currentParent?<ParentHome/>:<Navigate to={'/login/parent'}/>}/>
