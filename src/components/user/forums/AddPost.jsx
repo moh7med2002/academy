@@ -12,20 +12,30 @@ import { useForm } from "react-hook-form";
 
 function AddPost(props) {
   const { register, handleSubmit } = useForm();
+
   const { currentUser } = useSelector((state) => state.user);
-  return (
+  const { currentTeacher } = useSelector((state) => state.teacher);
+
+  const api =
+  currentUser
+      ? `${process.env.REACT_APP_API}/api/student/post/${props.forum.id}`
+      : `${process.env.REACT_APP_API}/api/teacher/post/${props.forum.id}`;
+      const auth =
+  currentUser
+      ? currentUser
+      : currentTeacher;  return (
     <form
       onSubmit={handleSubmit((data) => {
         const formData = new FormData();
         formData.append("content", data.content);
 
         fetch(
-          `${process.env.REACT_APP_API}/api/student/post/${props.forum.id}`,
+          api,
           {
             method: "POST",
             body: formData,
             headers: {
-              Authorization: currentUser.token,
+              Authorization: auth?.token,
             },
           }
         )

@@ -13,6 +13,16 @@ import { useForm } from "react-hook-form";
 function AddComment(props) {
   const { register, handleSubmit } = useForm();
   const { currentUser } = useSelector((state) => state.user);
+  const { currentTeacher } = useSelector((state) => state.teacher);
+
+  const api =
+  currentUser
+      ? `${process.env.REACT_APP_API}/api/student/comment/${props.post.id}`
+      : `${process.env.REACT_APP_API}/api/teacher/comment/${props.post.id}`;
+      const auth =
+  currentUser
+      ? currentUser
+      : currentTeacher;
   return (
     <form
       onSubmit={handleSubmit((data) => {
@@ -21,12 +31,12 @@ function AddComment(props) {
         console.log("props.post.id: ", props.post.id);
 
         fetch(
-          `${process.env.REACT_APP_API}/api/student/comment/${props.post.id}`,
+          api,
           {
             method: "POST",
             body: formData,
             headers: {
-              Authorization: currentUser.token,
+              Authorization: auth.token,
             },
           }
         )
