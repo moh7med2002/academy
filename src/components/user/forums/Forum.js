@@ -19,7 +19,6 @@ export default function Forum({ forum }) {
         }
       );
       const data = await response.json();
-      console.log(data);
       navigate(`/forums/${forum.id}`);
     } catch (err) {
       console.log(err);
@@ -28,6 +27,7 @@ export default function Forum({ forum }) {
 
   return (
     <motion.div
+      key={forum.id}
       className="forum-wrapper"
       initial={{ opacity: 0, y: "-10px" }}
       animate={{ opacity: 1, y: "0px", transition: { duration: 0.4 } }}
