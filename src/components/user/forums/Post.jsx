@@ -14,7 +14,6 @@ import AddCommentOutlinedIcon from "@mui/icons-material/AddCommentOutlined";
 import React, { useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { useSelector } from "react-redux";
 import { red } from "@mui/material/colors";
 import { useParams } from "react-router";
 import AddComment from "./AddComment";
@@ -28,8 +27,6 @@ export default function Post({ post }) {
   const [email, setEmail] = useState("");
   const [comments, setComments] = useState([]);
 
-  const { currentUser } = useSelector((state) => state.user);
-
   useEffect(() => {
     async function getAvatar() {
       if (post.StudentId) {
@@ -38,9 +35,6 @@ export default function Post({ post }) {
             `${process.env.REACT_APP_API}/api/student/${post.StudentId}`,
             {
               method: "GET",
-              headers: {
-                Authorization: currentUser.token,
-              },
             }
           );
           const data = await response.json();
@@ -57,9 +51,6 @@ export default function Post({ post }) {
             `${process.env.REACT_APP_API}/api/teacher/${post.TeacherId}`,
             {
               method: "GET",
-              headers: {
-                Authorization: currentUser.token,
-              },
             }
           );
           const data = await response.json();

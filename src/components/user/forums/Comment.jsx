@@ -8,15 +8,12 @@ import {
   CardActions,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import { blue } from "@mui/material/colors";
 
 export default function Comment({ comment }) {
   const [avatar, setAvatar] = useState("a");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-
-  const { currentUser } = useSelector((state) => state.user);
 
   useEffect(() => {
     async function getAvatar() {
@@ -26,9 +23,6 @@ export default function Comment({ comment }) {
             `${process.env.REACT_APP_API}/api/student/${comment.StudentId}`,
             {
               method: "GET",
-              headers: {
-                Authorization: currentUser.token,
-              },
             }
           );
           const data = await response.json();
@@ -44,9 +38,6 @@ export default function Comment({ comment }) {
             `${process.env.REACT_APP_API}/api/teacher/${comment.TeacherId}`,
             {
               method: "GET",
-              headers: {
-                Authorization: currentUser.token,
-              },
             }
           );
           const data = await response.json();
