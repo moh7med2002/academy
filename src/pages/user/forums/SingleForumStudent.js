@@ -9,7 +9,7 @@ import AddPost from "../../../components/user/forums/AddPost";
 import Post from "../../../components/user/forums/Post";
 import Layout from "../../../components/teacherDash/Layout";
 
-export default function SingleForum() {
+export default function SingleForumStudent() {
   const params = useParams();
 
   const [forum, setForum] = useState([]);
@@ -64,7 +64,6 @@ export default function SingleForum() {
   }
 
   return (
-    <Layout>
       <div>
         <h1
           style={{ marginTop: 100, marginBottom: 30, marginRight: 50 }}
@@ -94,6 +93,5 @@ export default function SingleForum() {
           })
         )}
       </div>
-    </Layout>
   );
 }

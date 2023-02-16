@@ -107,7 +107,7 @@ export default function TeacherForums() {
                                                     {item.Students.length}
                                                 </StyledTableCell>
                                                 <StyledTableCell component="th" scope="row" >
-                                                    <Button onClick={()=>navigate(`/teacher-dash/forum/${item.id}`)}><VisibilityIcon/></Button>
+                                                    <Button onClick={()=>navigate(`/teacher-dash/forums/${item.id}`)}><VisibilityIcon/></Button>
                                                 </StyledTableCell>
                                             </StyledTableRow>
                                             )

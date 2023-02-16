@@ -1,5 +1,5 @@
-import { Route, Routes,Navigate } from "react-router-dom"; 
-import {useSelector} from 'react-redux'
+import { Route, Routes, Navigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import UserpagesOutlet from "./pages/user/UserpagesOutlet";
 import Home from "./pages/user/home/Home";
 import Groups from "./pages/user/groups/Groups";
@@ -31,9 +31,9 @@ import ChartPage from "./pages/parent/ChartPage";
 import VideoLessonsSearchFound from "./pages/user/videoLessons/VideoLessonsSearchFound";
 import VideoLessonsSearchNotFound from "./pages/user/videoLessons/VideoLessonsSearchNotFound";
 import MainChartPage from "./pages/parent/MainChartPage";
-import HomeStudentDash from './pages/studentDash/HomeStudentDash.jsx'
-import HomeTeacherDash from './pages/teacherDash/HomeTeacherDash'
-import { createTheme  , ThemeProvider} from '@mui/material/styles';
+import HomeStudentDash from "./pages/studentDash/HomeStudentDash.jsx";
+import HomeTeacherDash from "./pages/teacherDash/HomeTeacherDash";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ExamReveal from "./pages/studentDash/ExamReveal";
 import StudentWallet from "./pages/studentDash/StudentWallet";
 import StudentCourses from "./pages/studentDash/StudentCourses";
@@ -55,7 +55,7 @@ import TeacherGroups from "./pages/teacherDash/TeacherGroups";
 import TeacherSingleGroup from "./pages/teacherDash/TeacherSingleGroup";
 import TeacherGroupLessons from "./pages/teacherDash/TeacherGroupLessons";
 import TeacherGroupStudents from "./pages/teacherDash/TeacherGroupStudents";
-import NotLogin from './NotLogin'
+import NotLogin from "./NotLogin";
 import TeacherPsychos from "./pages/teacherDash/TeacherPsychos";
 import TeacherSinglePsycho from "./pages/teacherDash/TeacherSinglePsycho";
 import SessionManagement from "./pages/teacherDash/TeacherManagmentSession";
@@ -71,15 +71,16 @@ import GroupDetails from "./pages/user/groups/GroupDetails";
 import SingleGroupLesson from "./pages/user/groups/SingleGroupLesson";
 import ParentNotifications from "./pages/parentDash/ParentNotifications";
 import TeacherForums from "./pages/teacherDash/TeacherForums";
+import SingleForumStudent from "./pages/user/forums/SingleForumStudent";
 
 const theme = createTheme({
-  direction: 'rtl',
-  palette:{
-    primary:{
-      main:"#18A0FB",
-      contrastText:"#ffffff"
-    }
-  }
+  direction: "rtl",
+  palette: {
+    primary: {
+      main: "#18A0FB",
+      contrastText: "#ffffff",
+    },
+  },
 });
 
 function App() {
@@ -95,111 +96,424 @@ function App() {
           <Route path="/" element={<UserpagesOutlet />}>
             <Route index element={<Home />} />
             {/** courses section*/}
-            <Route path="courses" element={currentUser?<Courses />:<NotLogin/>} />
-            <Route path="courses/:courseId" element={currentUser?<SingleCourse/>:<NotLogin/>}/>
-            <Route path="lessons/:lessonId" element={currentUser?<Lesson/>:<NotLogin/>}/>
-            <Route path="exams/:examId" element={currentUser?<ExamQuestions/>:<NotLogin/>}/>
+            <Route
+              path="courses"
+              element={currentUser ? <Courses /> : <NotLogin />}
+            />
+            <Route
+              path="courses/:courseId"
+              element={currentUser ? <SingleCourse /> : <NotLogin />}
+            />
+            <Route
+              path="lessons/:lessonId"
+              element={currentUser ? <Lesson /> : <NotLogin />}
+            />
+            <Route
+              path="exams/:examId"
+              element={currentUser ? <ExamQuestions /> : <NotLogin />}
+            />
             {/** exams section*/}
-            <Route path="exams" element={currentUser?<ExamsHome/>:<NotLogin/>}/>
-            <Route path="marks" element={currentUser?<MarksHome/>:<NotLogin/>}/>
+            <Route
+              path="exams"
+              element={currentUser ? <ExamsHome /> : <NotLogin />}
+            />
+            <Route
+              path="marks"
+              element={currentUser ? <MarksHome /> : <NotLogin />}
+            />
             {/** group section */}
-            <Route path="groups" element={currentUser?<Groups />:<NotLogin/>}/>
-            <Route path="groups/:id" element={currentUser?<SingleGropup/>:<NotLogin/>}/>
-            <Route path="groups/:id/lessons" element={currentUser?<GroupLessons/>:<NotLogin/>}/>
-            <Route path="groups/:id/details" element={currentUser?<GroupDetails/>:<NotLogin/>}/>
-            <Route path="group/:groupId/lesson/:lessonId" element={currentUser?<SingleGroupLesson/>:<NotLogin/>}/>
+            <Route
+              path="groups"
+              element={currentUser ? <Groups /> : <NotLogin />}
+            />
+            <Route
+              path="groups/:id"
+              element={currentUser ? <SingleGropup /> : <NotLogin />}
+            />
+            <Route
+              path="groups/:id/lessons"
+              element={currentUser ? <GroupLessons /> : <NotLogin />}
+            />
+            <Route
+              path="groups/:id/details"
+              element={currentUser ? <GroupDetails /> : <NotLogin />}
+            />
+            <Route
+              path="group/:groupId/lesson/:lessonId"
+              element={currentUser ? <SingleGroupLesson /> : <NotLogin />}
+            />
             {/** membership section */}
             <Route path="memberships" element={<MemberShipsPage />} />
-            <Route path="memberships/golden" element={<GoldenMemberShipPage />}/>
-            <Route path="memberships/silver" element={<SilverMemberShipPage />}/>
-            <Route path="memberships/regular" element={<ReqularMemberShipPage />}/>
+            <Route
+              path="memberships/golden"
+              element={<GoldenMemberShipPage />}
+            />
+            <Route
+              path="memberships/silver"
+              element={<SilverMemberShipPage />}
+            />
+            <Route
+              path="memberships/regular"
+              element={<ReqularMemberShipPage />}
+            />
             {/** forums section */}
             <Route path="forums" element={<Forums />} />
-            <Route path="forums/:forumId"element={currentUser?<SingleForum/>:<Navigate to={'/login/student'}/>}/>
+            <Route
+              path="forums/:forumId"
+              element={
+                currentUser ? (
+                  <SingleForumStudent />
+                ) : (
+                  <Navigate to={"/login/student"} />
+                )
+              }
+            />
             {/** psychologist section */}
             <Route path="psychologist" element={<Physchologist />} />
-            <Route path="psychologist/sessions" element={<PsychologistSessions />}/>
-            <Route path="psychologist/request/:sessionId" element={<RequestSession />}/>
+            <Route
+              path="psychologist/sessions"
+              element={<PsychologistSessions />}
+            />
+            <Route
+              path="psychologist/request/:sessionId"
+              element={<RequestSession />}
+            />
           </Route>
 
           {/* login and register routes new */}
           <Route path="register/teacher" element={<TeacherRegister />} />
           <Route path="register/student" element={<StudentRegister />} />
-          <Route path="register/parent" element={<ParentRegister/>} />
+          <Route path="register/parent" element={<ParentRegister />} />
           <Route path="login/teacher" element={<TeacherLogin />} />
           <Route path="login/student" element={<StudentLogin />} />
           <Route path="forgot-password" element={<ForgotPassword />} />
           <Route path="login/parent" element={<ParentLogin />} />
 
-            {/** student dashboard new */}
-            <Route path="student-dash" element={currentUser?<HomeStudentDash/>:<Navigate to={'/login/student'}/>}/>
-            <Route path="student-dash/examReveal" element={currentUser?<ExamReveal/>:<Navigate to={'/login/student'}/>}/>
-            <Route path="student-dash/studentWallet" element={currentUser?<StudentWallet/>:<Navigate to={'/login/student'}/>}/>
-            <Route path="student-dash/studentCourses" element={currentUser?<StudentCourses/>:<Navigate to={'/login/student'}/>}/>
-            <Route path="student-dash/studentGroups" element={currentUser?<StudentGroups/>:<Navigate to={'/login/student'}/>}/>
-            <Route path="student-dash/studentSessions" element={currentUser?<StudentSessions/>:<Navigate to={'/login/student'}/>}/>
-            <Route path="profile" element={currentUser?<Profile/>:<Navigate to={'/login/student'}/>}/>
-            <Route path="notifications" element={currentUser?<StudentNotifications/>:<Navigate to={'/login/student'}/>}/>
+          {/** student dashboard new */}
+          <Route
+            path="student-dash"
+            element={
+              currentUser ? (
+                <HomeStudentDash />
+              ) : (
+                <Navigate to={"/login/student"} />
+              )
+            }
+          />
+          <Route
+            path="student-dash/examReveal"
+            element={
+              currentUser ? <ExamReveal /> : <Navigate to={"/login/student"} />
+            }
+          />
+          <Route
+            path="student-dash/studentWallet"
+            element={
+              currentUser ? (
+                <StudentWallet />
+              ) : (
+                <Navigate to={"/login/student"} />
+              )
+            }
+          />
+          <Route
+            path="student-dash/studentCourses"
+            element={
+              currentUser ? (
+                <StudentCourses />
+              ) : (
+                <Navigate to={"/login/student"} />
+              )
+            }
+          />
+          <Route
+            path="student-dash/studentGroups"
+            element={
+              currentUser ? (
+                <StudentGroups />
+              ) : (
+                <Navigate to={"/login/student"} />
+              )
+            }
+          />
+          <Route
+            path="student-dash/studentSessions"
+            element={
+              currentUser ? (
+                <StudentSessions />
+              ) : (
+                <Navigate to={"/login/student"} />
+              )
+            }
+          />
+          <Route
+            path="profile"
+            element={
+              currentUser ? <Profile /> : <Navigate to={"/login/student"} />
+            }
+          />
+          <Route
+            path="notifications"
+            element={
+              currentUser ? (
+                <StudentNotifications />
+              ) : (
+                <Navigate to={"/login/student"} />
+              )
+            }
+          />
 
-            {/** teacher dashboard new */}
-            <Route path="teacher-dash" element={currentTeacher?<HomeTeacherDash/>:<Navigate to={'/login/teacher'}/>}/>
-            <Route path="teacher-dash/courses" element={currentTeacher?<TeacherCourses/>:<Navigate to={'/login/teacher'}/>}/>
-            <Route path="teacher-dash/groups" element={currentTeacher?<TeacherGroups/>:<Navigate to={'/login/teacher'}/>}/>
-            <Route path="teacher-dash/groups/:id" element={currentTeacher?<TeacherSingleGroup/>:<Navigate to={'/login/teacher'}/>}/>
-            <Route path="teacher-dash/groups/:id/lessons" element={currentTeacher?<TeacherGroupLessons/>:<Navigate to={'/login/teacher'}/>}/>
-            <Route path="teacher-dash/groups/:id/students" element={currentTeacher?<TeacherGroupStudents/>:<Navigate to={'/login/teacher'}/>}/>
-            <Route path="teacher-dash/courses/:courseId" element={currentTeacher?<TeacherUnits/>:<Navigate to={'/login/teacher'}/>}/>
-            <Route path="teacher-dash/courses/:unitId/lessons" element={currentTeacher?<TeacherLessons/>:<Navigate to={'/login/teacher'}/>}/>
-            <Route path="teacher-dash/courses/:courseId/units/:unitId/exams" element={currentTeacher?<TeacherExams/>:<Navigate to={'/login/teacher'}/>}/>
-            <Route path="courses/:courseId/units/:unitId/exams/:examId/questions" element={currentTeacher?<TeacherQuestions/>:<Navigate to={'/login/teacher'}/>}/>
-            <Route path="/exams/:examId/marks" element={currentTeacher?<TeacherGrades/>:<Navigate to={'/login/teacher'}/>}/>
-            <Route path="/teacher-dash/psychos" element={currentTeacher?<TeacherPsychos/>:<Navigate to={'/login/teacher'}/>}/>
-            <Route path="/teacher-dash/psychos/:id" element={currentTeacher?<TeacherSinglePsycho/>:<Navigate to={'/login/teacher'}/>}/>
-            <Route path="/teacher-dash/psychos/:id/sessions" element={currentTeacher?<SessionManagement/>:<Navigate to={'/login/teacher'}/>}/>
-            <Route path="/teacher-dash/psychos/:id/sessionsAccepted" element={currentTeacher?<TeacherSessions/>:<Navigate to={'/login/teacher'}/>}/>
-            <Route path="/teacher-dash/profile" element={currentTeacher?<TeacherProfile/>:<Navigate to={'/login/teacher'}/>}/>
-            <Route path="teacher-dash/forums" element={currentTeacher?<TeacherForums/>:<Navigate to={'/login/teacher'}/>}/>
-            <Route path="/teacher-dash/forum/:forumId" element={currentTeacher?<SingleForum/>:<Navigate to={'/login/teacher'}/>}/>
+          {/** teacher dashboard new */}
+          <Route
+            path="teacher-dash"
+            element={
+              currentTeacher ? (
+                <HomeTeacherDash />
+              ) : (
+                <Navigate to={"/login/teacher"} />
+              )
+            }
+          />
+          <Route
+            path="teacher-dash/courses"
+            element={
+              currentTeacher ? (
+                <TeacherCourses />
+              ) : (
+                <Navigate to={"/login/teacher"} />
+              )
+            }
+          />
+          <Route
+            path="teacher-dash/groups"
+            element={
+              currentTeacher ? (
+                <TeacherGroups />
+              ) : (
+                <Navigate to={"/login/teacher"} />
+              )
+            }
+          />
+          <Route
+            path="teacher-dash/groups/:id"
+            element={
+              currentTeacher ? (
+                <TeacherSingleGroup />
+              ) : (
+                <Navigate to={"/login/teacher"} />
+              )
+            }
+          />
+          <Route
+            path="teacher-dash/groups/:id/lessons"
+            element={
+              currentTeacher ? (
+                <TeacherGroupLessons />
+              ) : (
+                <Navigate to={"/login/teacher"} />
+              )
+            }
+          />
+          <Route
+            path="teacher-dash/groups/:id/students"
+            element={
+              currentTeacher ? (
+                <TeacherGroupStudents />
+              ) : (
+                <Navigate to={"/login/teacher"} />
+              )
+            }
+          />
+          <Route
+            path="teacher-dash/courses/:courseId"
+            element={
+              currentTeacher ? (
+                <TeacherUnits />
+              ) : (
+                <Navigate to={"/login/teacher"} />
+              )
+            }
+          />
+          <Route
+            path="teacher-dash/courses/:unitId/lessons"
+            element={
+              currentTeacher ? (
+                <TeacherLessons />
+              ) : (
+                <Navigate to={"/login/teacher"} />
+              )
+            }
+          />
+          <Route
+            path="teacher-dash/courses/:courseId/units/:unitId/exams"
+            element={
+              currentTeacher ? (
+                <TeacherExams />
+              ) : (
+                <Navigate to={"/login/teacher"} />
+              )
+            }
+          />
+          <Route
+            path="courses/:courseId/units/:unitId/exams/:examId/questions"
+            element={
+              currentTeacher ? (
+                <TeacherQuestions />
+              ) : (
+                <Navigate to={"/login/teacher"} />
+              )
+            }
+          />
+          <Route
+            path="/exams/:examId/marks"
+            element={
+              currentTeacher ? (
+                <TeacherGrades />
+              ) : (
+                <Navigate to={"/login/teacher"} />
+              )
+            }
+          />
+          <Route
+            path="/teacher-dash/psychos"
+            element={
+              currentTeacher ? (
+                <TeacherPsychos />
+              ) : (
+                <Navigate to={"/login/teacher"} />
+              )
+            }
+          />
+          <Route
+            path="/teacher-dash/psychos/:id"
+            element={
+              currentTeacher ? (
+                <TeacherSinglePsycho />
+              ) : (
+                <Navigate to={"/login/teacher"} />
+              )
+            }
+          />
+          <Route
+            path="/teacher-dash/psychos/:id/sessions"
+            element={
+              currentTeacher ? (
+                <SessionManagement />
+              ) : (
+                <Navigate to={"/login/teacher"} />
+              )
+            }
+          />
+          <Route
+            path="/teacher-dash/psychos/:id/sessionsAccepted"
+            element={
+              currentTeacher ? (
+                <TeacherSessions />
+              ) : (
+                <Navigate to={"/login/teacher"} />
+              )
+            }
+          />
+          <Route
+            path="/teacher-dash/profile"
+            element={
+              currentTeacher ? (
+                <TeacherProfile />
+              ) : (
+                <Navigate to={"/login/teacher"} />
+              )
+            }
+          />
+          <Route
+            path="/teacher-dash/forums"
+            element={
+              currentTeacher ? (
+                <TeacherForums />
+              ) : (
+                <Navigate to={"/login/teacher"} />
+              )
+            }
+          />
+          <Route
+            path="/teacher-dash/forums/:forumId"
+            element={
+              currentTeacher ? (
+                <SingleForum />
+              ) : (
+                <Navigate to={"/login/teacher"} />
+              )
+            }
+          />
 
+          {/** parent dashboard */}
+          <Route
+            path="parent-dash"
+            element={
+              currentParent ? <ParentHome /> : <Navigate to={"/login/parent"} />
+            }
+          />
+          <Route
+            path="parent-dash/add-students"
+            element={
+              currentParent ? (
+                <AddStudents />
+              ) : (
+                <Navigate to={"/login/parent"} />
+              )
+            }
+          />
+          <Route
+            path="parent-dash/student/:id"
+            element={
+              currentParent ? (
+                <ParentViewStudent />
+              ) : (
+                <Navigate to={"/login/parent"} />
+              )
+            }
+          />
+          <Route
+            path="parent-dash/notifications"
+            element={
+              currentParent ? (
+                <ParentNotifications />
+              ) : (
+                <Navigate to={"/login/parent"} />
+              )
+            }
+          />
 
-
-            {/** parent dashboard */}
-            <Route path="parent-dash" element={currentParent?<ParentHome/>:<Navigate to={'/login/parent'}/>}/>
-            <Route path="parent-dash/add-students" element={currentParent?<AddStudents/>:<Navigate to={'/login/parent'}/>}/>
-            <Route path="parent-dash/student/:id" element={currentParent?<ParentViewStudent/>:<Navigate to={'/login/parent'}/>}/>
-            <Route path="parent-dash/notifications" element={currentParent?<ParentNotifications/>:<Navigate to={'/login/parent'}/>}/>
-          
-           {/** not use pages */}
+          {/** not use pages */}
           <Route path="parent" element={<MainChartPage />}>
             <Route index element={<LandParentPage />} />
             <Route path="chart" element={<ChartPage />} />
           </Route>
-            <Route path="videoLessons" element={<VideoLessons />} />
-            <Route
-              path="videoLessons/search"
-              element={<VideoLessonsSearchFound />}
-            />
-            <Route
-              path="videoLessons/search/notFound"
-              element={<VideoLessonsSearchNotFound />}
-            />
-            <Route
-              path="videoLessons/:lessonsType"
-              element={<VideoLessonsCategory />}
-            />
-            <Route
-              path="videoLessons/watch/url/:lessonType/:lessonId"
-              element={<LessonUrlPage />}
-            />
-            <Route
-              path="videoLessons/watch/:lessonType/:lessonId"
-              element={<PlayerLessonPage />}
-            />
-            <Route
-              path="videoLessons/:lessonType/:lessonId"
-              element={<ViewVideoLessonSingle />}
-            />
-            <Route path="*" element={<NotFound/>} />
+          <Route path="videoLessons" element={<VideoLessons />} />
+          <Route
+            path="videoLessons/search"
+            element={<VideoLessonsSearchFound />}
+          />
+          <Route
+            path="videoLessons/search/notFound"
+            element={<VideoLessonsSearchNotFound />}
+          />
+          <Route
+            path="videoLessons/:lessonsType"
+            element={<VideoLessonsCategory />}
+          />
+          <Route
+            path="videoLessons/watch/url/:lessonType/:lessonId"
+            element={<LessonUrlPage />}
+          />
+          <Route
+            path="videoLessons/watch/:lessonType/:lessonId"
+            element={<PlayerLessonPage />}
+          />
+          <Route
+            path="videoLessons/:lessonType/:lessonId"
+            element={<ViewVideoLessonSingle />}
+          />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </ThemeProvider>
