@@ -2,23 +2,25 @@ import Forum from "../../../components/user/forums/Forum";
 import "../../../assest/css/user/forums/forumsPage.css";
 import { Typography, Box, Grid } from "@mui/material";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 export default function Forums() {
   const [forums, setForums] = useState([]);
+  const { currentUser } = useSelector((state) => state.user);
   useEffect(() => {
     async function getForums() {
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_API}/api/forum/all`,
+          `${process.env.REACT_APP_API}/api/forum/student/allowed`,
           {
             method: "GET",
             headers: {
               "Content-Type": "application/json",
+              "Authorization":currentUser.token
             },
           }
         );
         const data = await response.json();
-        console.log(data.forums);
         setForums(data.forums);
       } catch (err) {
         console.log(err);

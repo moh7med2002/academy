@@ -72,6 +72,7 @@ import SingleGroupLesson from "./pages/user/groups/SingleGroupLesson";
 import ParentNotifications from "./pages/parentDash/ParentNotifications";
 import TeacherForums from "./pages/teacherDash/TeacherForums";
 import SingleForumStudent from "./pages/user/forums/SingleForumStudent";
+import StudentForums from "./pages/studentDash/StudentForums";
 
 const theme = createTheme({
   direction: "rtl",
@@ -241,6 +242,16 @@ function App() {
             element={
               currentUser ? (
                 <StudentSessions />
+              ) : (
+                <Navigate to={"/login/student"} />
+              )
+            }
+          />
+          <Route
+            path="student-dash/studentForums"
+            element={
+              currentUser ? (
+                <StudentForums />
               ) : (
                 <Navigate to={"/login/student"} />
               )

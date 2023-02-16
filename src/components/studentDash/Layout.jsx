@@ -90,6 +90,13 @@ function Layout(props) {
                     </ListItemButton>
                 </ListItem>
             </Link>
+            <Link to="/student-dash/studentForums">
+                <ListItem  disablePadding>
+                    <ListItemButton>
+                    <Text>منتدياتي</Text>
+                    </ListItemButton>
+                </ListItem>
+            </Link>
             <Link to="/student-dash/examReveal">
                 <ListItem  disablePadding>
                     <ListItemButton>

@@ -1,11 +1,14 @@
 import { Button } from "@mui/material";
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "../../../assest/css/user/forums/forum.css";
 
 export default function Forum({ forum }) {
   const navigate = useNavigate();
+  const { currentUser } = useSelector((state) => state.user);
+  console.log(forum.Students.find(st => st.id == currentUser.student.id));
 
   async function joinForum() {
     try {
@@ -15,6 +18,7 @@ export default function Forum({ forum }) {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            "Authorization":currentUser.token
           },
         }
       );
@@ -32,26 +36,33 @@ export default function Forum({ forum }) {
       initial={{ opacity: 0, y: "-10px" }}
       animate={{ opacity: 1, y: "0px", transition: { duration: 0.4 } }}
     >
-      <Link to="/forums/1">
         {forum?.image ? (
-          <img src={forum?.image} alt="load.." className="image" />
+          <img src={`${process.env.REACT_APP_API}/images/${forum.image}`} alt="load.." className="image" />
         ) : (
           <img
-            src="https://cdn.spark.app/media/whitefuse/image/blog_forums_cropped.png"
+            src={`${process.env.REACT_APP_API}/images/${forum.image}`}
             alt="load.."
             className="image"
             to={`/forum/${forum.id}`}
           />
         )}
-      </Link>
       <div className="wrapper-content">
-        <Link to={`/forums/${forum.id}`}>
           <h2 className="heading-2">{forum?.title} </h2>
           <span className="name">
             الأستاذ /<span> {forum?.Teacher?.name}</span>
           </span>
-        </Link>
         <div className="controls">
+          {
+            forum.Students.find(st => st.id == currentUser.student.id)?
+            <Link to={`/forums/${forum.id}`}>
+            <Button
+            variant="contained"
+            sx={{ width: "140px", borderRadius: "14px" }}
+          >
+             مشاهدة
+          </Button>
+            </Link>
+          :
           <Button
             variant="contained"
             sx={{ width: "140px", borderRadius: "14px" }}
@@ -59,6 +70,7 @@ export default function Forum({ forum }) {
           >
             انضم الان
           </Button>
+          }
         </div>
       </div>
     </motion.div>
